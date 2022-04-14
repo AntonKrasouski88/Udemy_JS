@@ -47,3 +47,26 @@ function firstTask() {
 }
 firstTask();
 
+function secondTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    // Пишем решение вот тут
+    for (let i = 0; i < data.length; i++) {
+        if (typeof data[i] == "number") {
+            data[i] = data[i] * 2;
+        } else {
+            data[i] = data[i] + ' - done';
+        }
+    }
+    console.log(data);
+    /* let resultArr = typeof data[0];
+    console.log(resultArr);
+    if (resultArr == "number") {
+        data[0] = data [0] * 2;
+    } 
+    console.log(data[0]); */
+
+    // Не трогаем
+    return data;
+}
+secondTask();
