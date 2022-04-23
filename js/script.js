@@ -1,4 +1,4 @@
-let numberOfFilms = +prompt("How many films did you alredy watch?", "");
+/* let numberOfFilms = +prompt("How many films did you alredy watch?", "");
 
 let personalMovieDB = {
     count: numberOfFilms,
@@ -15,7 +15,7 @@ if (personalMovieDB.count < 10) {
     alert("You are cinephile");
 } else {
     alert("Error");
-}
+} */
 
 /* let a = prompt("One of the last films?", "");
 let b = prompt("How much was it rated?", "");
@@ -26,7 +26,7 @@ personalMovieDB.movies[a]= b;
 personalMovieDB.movies[c]= d;
 console.log(personalMovieDB); */
 
-for (let i = 0; i < 2; i++) {
+/* for (let i = 0; i < 2; i++) {
     let a = prompt("One of the last films?", "");
     let b = prompt ("How much was it rated?", "");
     personalMovieDB.movies[a] = b;
@@ -45,9 +45,9 @@ function firstTask() {
     // Не трогаем
     return result;
 }
-firstTask();
+firstTask(); */
 
-function secondTask() {
+/* function secondTask() {
     // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
     const data = [5, 10, 'Shopping', 20, 'Homework'];
     // Пишем решение вот тут
@@ -58,7 +58,7 @@ function secondTask() {
             data[i] = data[i] + ' - done';
         }
     }
-    console.log(data);
+    console.log(data); */
     /* let resultArr = typeof data[0];
     console.log(resultArr);
     if (resultArr == "number") {
@@ -67,6 +67,143 @@ function secondTask() {
     console.log(data[0]); */
 
     // Не трогаем
-    return data;
+    //return data;
+//}
+//secondTask();
+
+/* function thirdTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+    // Пишем решение вот тут
+    for (let i = 0; i < data.length; i++) {
+        for (let j = (data.length - 1); j >=0; j--) {
+            result[i] = data[j];
+            i++;
+        }
+    }
+    console.log(result);
+    // Не трогаем
+    return result;
 }
-secondTask();
+thirdTask();
+
+function sayHello (name) {
+    console.log("Привет", name);
+}
+
+sayHello("Антон");
+
+function returnNeighboringNumbers (a) {
+    console.log([a-1, a, a+1]);
+}
+returnNeighboringNumbers(8); 
+
+function getMathResult(first, second) {
+    let hyphen = "---";
+    let result = "";
+    if (second <= 0 || typeof second === "string") {
+    result = first;
+    } else if (typeof second !== "string") {
+        for (let i = 1; i <= second; i++) {
+            if (i < second) {
+                result += first * i + hyphen;
+            } else {
+                result += first * i;
+            }
+        }
+    }
+    console.log(result);
+}
+getMathResult(5, 5);
+getMathResult(3, 10);
+getMathResult(10, 5);
+getMathResult(10, "5");
+getMathResult(7, 0);
+
+let mathResult = "";
+let b = "0";
+let a = 20;       
+if (b <= 0 || typeof second == "string" ) {
+     mathResult = a;
+}
+console.log(mathResult); */
+
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    }
+}
+
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+function rememberMyFilms () {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt('Один из последних просмотренных фильмов?', '');
+        const b = prompt('На сколько оцените его?', '');
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log ("Done");
+        } else {
+            console.log("Error");
+            i--;
+        }
+    }
+}
+
+rememberMyFilms();
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        alert('Просмотренно довольно мало фильмов');
+    } else if (personalMovieDB.count >= 10, personalMovieDB.count < 30) {
+        alert('Вы класический зритель');
+    } else if (personalMovieDB.count > 30) {
+        alert('Вы киноман');
+    } else {
+        alert('Error');
+    }
+}
+
+detectPersonalLevel();
+
+// function showMyDB() {
+//     if (personalMovieDB.privat == false) {
+//         console.log(personalMovieDB);
+//     }
+// }
+//
+// showMyDB();
+
+function showMyDB(checkConditions) {
+  if(!checkConditions) {
+    console.log(personalMovieDB);
+  }
+}
+showMyDB(personalMovieDB.privat);
+
+// function writeYourGengers() {
+//     for (let i = 0; i < 3; i++) {
+//         personalMovieDB.genres [i] = +prompt('Ваш любимый жанр под номером ${1, 2, 3, 4, 5, 6, 7, 8, 9, 10}', '');
+//     }
+// }
+// writeYourGengers();
+function writeYourGengers() {
+    for (let i = 1; i <= 3; i++) {
+            const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+      personalMovieDB.genres[i - 1] = genre;
+    }
+}
+writeYourGengers();
