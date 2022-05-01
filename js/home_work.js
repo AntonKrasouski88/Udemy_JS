@@ -65,6 +65,7 @@ function getCoupeNumber(seatNumber) {
 
     for (let i = 4; i <= 36; i = i + 4) {
         if (seatNumber <= i) {
+            console.log(i/4);
             return Math.ceil(i / 4);
         }
     }
@@ -72,3 +73,137 @@ function getCoupeNumber(seatNumber) {
 }
 
 getCoupeNumber(33);
+
+function findMaxNumber (first, second, third, fourth) {
+    let checkNumber = first + second + third + fourth;
+    if (typeof checkNumber == 'string'){
+        console.log(0);
+        return 0;
+    } else {
+        let maxNumber = Math.max(first, second, third, fourth);
+        console.log(maxNumber);
+        return maxNumber;
+    }
+    
+}
+findMaxNumber(7/8, 5, 10.8, 7);
+
+function getTimeFromMinutes (times) {
+    let hoursTimes = Math.trunc(times/60);
+    let minuteTimes = times%60;
+    if (typeof times !== 'number' || times < 0 || !Number.isInteger(times)) {
+        console.log("Ошибка проверте данные");
+        return "Ошибка проверте данные";
+    } else if (hoursTimes == 1) {
+        console.log(`Это ${hoursTimes} час и ${minuteTimes} минут`);
+        return `Это ${hoursTimes} час и ${minuteTimes} минут`;
+    } else if (hoursTimes == 2 || hoursTimes == 3 || hoursTimes == 4) {
+        console.log(`Это ${hoursTimes} часа и ${minuteTimes} минут`);
+        return `Это ${hoursTimes} часа и ${minuteTimes} минут`;
+    } else {
+        console.log(`Это ${hoursTimes} часов и ${minuteTimes} минут`);
+        return `Это ${hoursTimes} часов и ${minuteTimes} минут`;
+    } 
+}
+
+getTimeFromMinutes(1);
+
+/* function getTimeFromMinutes(minutesTotal) {
+    if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+        return "Ошибка, проверьте данные";
+    }
+
+    const hours = Math.floor(minutesTotal / 60);
+    const minutes = minutesTotal % 60;
+
+    let hoursStr = '';
+
+    switch (hours) {
+        case 0: 
+            hoursStr = 'часов';
+            break;
+        case 1:
+            hoursStr = 'час';
+            break;
+        case 2:
+        case 3:
+        case 4:
+            hoursStr = 'часа';
+            break;
+        default:
+            hoursStr = 'часов';
+    }
+    console.log(`Это ${hours} ${hoursStr} и ${minutes} минут`)
+    return `Это ${hours} ${hoursStr} и ${minutes} минут`;
+    
+}
+getTimeFromMinutes(1263); */
+
+function fib(fibNum) {
+    let a = 0;
+    let b = 1;
+    let c;
+    let result = "";
+    if (typeof fibNum =='number' && fibNum > 0 && Number.isInteger(fibNum)) {
+        for (let i = 0; i < fibNum - 2; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+            result += `${c} `;
+        }
+        console.log (`0 1 ${result}`);
+        return `0 1 ${result}`;
+    } else {
+        console.log('');
+        return '';
+    }
+}
+fib(7); 
+
+const arr =  [11, 3, 9, 6, 8];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum (a, b) {
+    return a - b;
+}
+
+//arr.pop();
+arr.push(10);
+
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for (let value of arr) {
+    console.log(value);
+}
+
+const alerm = [1, 2, 8, 6, 3, 7];
+
+alerm.forEach(function(item, i, alerm) {
+    console.log(`${i}: ${item} внутри массива ${alerm}`);
+});
+
+let objectLearn = {
+    name: "Julia Alves",
+    long: 23,
+    type: 'latin',
+    weigth: 75,
+    hobbies: {
+        films: 'shooting in films',
+        game: 'Old game'
+    }
+};
+
+/* console.log(Object.keys(objectLearn).length);
+
+for (let key in objectLearn) {
+    console.log(`Свойство ${key}`)
+} */
+
+console.log(Object.keys(objectLearn));
+const {films, game} = objectLearn.hobbies;
+console.log(films);
