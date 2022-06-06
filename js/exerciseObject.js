@@ -88,3 +88,55 @@ function showProgrammingLangs(plan) {
 }
 
 showProgrammingLangs(personalPlanPeter);
+
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+let result = strokes - par; 
+if (strokes == 1) {
+  return names[0];
+} else if (result <= -2) {
+  return names[1];
+} else if (result  == -1) {
+  return names[2];
+} else if (result == 0) {
+  return names[3];
+} else if (result == 1) {
+  return names[4];
+} else if (result == 2) {
+  return names[5];
+} else if (result >= 3) {
+  return names[6];
+} 
+
+  return "Change Me";
+  // Only change code above this line
+}
+
+golfScore(5, 4);
+
+let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+if (card >= 2 && card <= 6) {
+  return count += 1;
+} else if (card >= 7 && card <= 9) {
+  return count += 0;
+} else if (card >= 10 || card.typeof === "string") {
+  return count -= 1;
+}
+
+if (count > 0) {
+  return console.log(`${count} Hold`);
+} else if (count <= 0) {
+  return `${count} + "Hold"`;
+}
+
+
+  return "Change Me";
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
