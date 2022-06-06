@@ -1,3 +1,4 @@
+'use strict';
 /* let numberOfFilms = +prompt("How many films did you alredy watch?", "");
 
 let personalMovieDB = {
@@ -132,9 +133,9 @@ console.log(mathResult); */
 let numberOfFilms;
 
 function start() {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '').trim();
     while (numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '').trim();
     }
 }
 
@@ -145,65 +146,59 @@ const personalMovieDB = {
     movies: {},
     actors: {},
     genres: [],
-    privat: false
-};
-
-function rememberMyFilms () {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?', '');
-        const b = prompt('На сколько оцените его?', '');
-
-        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log ("Done");
+    privat: true,
+    rememberMyFilms: function  () {
+        for (let i = 0; i < 2; i++) {
+            const a = prompt('Один из последних просмотренных фильмов?', '').trim();
+            const b = prompt('На сколько оцените его?', '').trim();
+    
+            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                personalMovieDB.movies[a] = b;
+                console.log ("Done");
+            } else {
+                console.log("Error");
+                i--;
+            }
+            }
+        },
+    detectPersonalLevel: function () {
+        if (personalMovieDB.count < 10) {
+            alert('Просмотренно довольно мало фильмов');
+        } else if (personalMovieDB.count >= 10, personalMovieDB.count < 30) {
+            alert('Вы класический зритель');
+        } else if (personalMovieDB.count > 30) {
+            alert('Вы киноман');
         } else {
-            console.log("Error");
-            i--;
+            alert('Error');
+        }
+    },
+    showMyDB: function (checkConditions) {
+        if(!checkConditions) {
+          console.log(personalMovieDB);
+        }
+    },
+    writeYourGengers: function () {
+        for (let i = 1; i <= 3; i++) {
+            let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+            if(genre!="" && genre != null) {
+                personalMovieDB.genres[i - 1] = genre;
+            } else {
+                console.log(Error);
+                i--;
+            }  
+        }
+    },
+    toggleVisibleMyDB: function (checkPrivat) {
+        if(!checkPrivat) {
+            personalMovieDB.privat = true;
+        } else {
+            personalMovieDB.privat = false;
         }
     }
-}
+};
 
-rememberMyFilms();
-
-function detectPersonalLevel() {
-    if (personalMovieDB.count < 10) {
-        alert('Просмотренно довольно мало фильмов');
-    } else if (personalMovieDB.count >= 10, personalMovieDB.count < 30) {
-        alert('Вы класический зритель');
-    } else if (personalMovieDB.count > 30) {
-        alert('Вы киноман');
-    } else {
-        alert('Error');
-    }
-}
-
-detectPersonalLevel();
-
-// function showMyDB() {
-//     if (personalMovieDB.privat == false) {
-//         console.log(personalMovieDB);
-//     }
-// }
-//
-// showMyDB();
-
-function showMyDB(checkConditions) {
-  if(!checkConditions) {
-    console.log(personalMovieDB);
-  }
-}
-showMyDB(personalMovieDB.privat);
-
-// function writeYourGengers() {
-//     for (let i = 0; i < 3; i++) {
-//         personalMovieDB.genres [i] = +prompt('Ваш любимый жанр под номером ${1, 2, 3, 4, 5, 6, 7, 8, 9, 10}', '');
-//     }
-// }
-// writeYourGengers();
-function writeYourGengers() {
-    for (let i = 1; i <= 3; i++) {
-            const genre = prompt(`Ваш любимый жанр под номером ${i}`);
-      personalMovieDB.genres[i - 1] = genre;
-    }
-}
-writeYourGengers();
+personalMovieDB.rememberMyFilms();
+personalMovieDB.detectPersonalLevel();
+personalMovieDB.toggleVisibleMyDB(personalMovieDB.privat);
+personalMovieDB.writeYourGengers();
+personalMovieDB.showMyDB(personalMovieDB.privat);

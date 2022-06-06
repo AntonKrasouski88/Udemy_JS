@@ -95,3 +95,19 @@
 
   const a = parseInt("11", 2);
   console.log(parseInt("111", 2));
+
+  function testWhile(a) {
+    var x = 0;
+    for(let i = 1; i <= a; i++) {
+      console.log(Number.isInteger(a/2));
+      if (Number.isInteger(i/2) || a/2 == 0) {
+        x +=i;
+    } else {
+      continue;
+    }
+    return console.log (x);
+    }
+    
+}
+
+testWhile(3);
