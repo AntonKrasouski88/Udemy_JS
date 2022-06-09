@@ -27,3 +27,8 @@ function sayHello( name, city, state ) {
 }
 
 sayHello(['John', 'Smith'], 'Phoenix', 'Arizona');
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+sayHello('Mr. Spock');
