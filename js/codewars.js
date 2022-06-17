@@ -32,3 +32,17 @@ function sayHello(name) {
   return `Hello ${name}`;
 }
 sayHello('Mr. Spock');
+
+function squareOrSquareRoot(array) {
+  array.forEach((i)=> {
+    console.log(mati);
+    if(Number.isInteger(Math.sqrt(i))) {
+      Math.sqrt(i);
+    } else {
+      i *=i;
+    }
+  });
+  return console.log (array);  
+}
+
+squareOrSquareRoot([4,3,9,7,2,1]);
