@@ -34,15 +34,14 @@ function sayHello(name) {
 sayHello('Mr. Spock');
 
 function squareOrSquareRoot(array) {
-  array.forEach((i)=> {
-    console.log(mati);
-    if(Number.isInteger(Math.sqrt(i))) {
-      Math.sqrt(i);
+  for (let i = 0; i < array.length; i++) {
+    if(Number.isInteger(Math.sqrt(array[i]))) {
+      array[i] = Math.sqrt(array[i]);
     } else {
-      i *=i;
+      array[i] *= array[i];
     }
-  });
-  return console.log (array);  
+  }
+  return array;  
 }
 
 squareOrSquareRoot([4,3,9,7,2,1]);
