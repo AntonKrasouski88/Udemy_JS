@@ -72,3 +72,26 @@ function expressionMatter(a, b, c) {
 }
 
 expressionMatter(10, 5, 6)
+
+function mergeArrays(arr1, arr2) {
+ /*  let arr3 = [];
+  for (let i = 0; i < arr1.length; i++) {
+  arr2.forEach((item, j) => {
+    if(arr1[i] == arr2[j]) {
+      delete arr2[j];
+    }
+  })
+  arr2 = arr2.filter(function(num) {
+    return (num != null && num != undefined)
+  })
+  }
+  arr3 = [...arr1,...arr2];
+  arr3.sort(function(a,b) {
+  return a-b;
+  })
+  return arr3; */
+  let arr3 = [...new Set(arr1.concat(arr2).sort((a,b)=>(a-b)))];
+  console.log (arr3);
+}
+
+mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]);
