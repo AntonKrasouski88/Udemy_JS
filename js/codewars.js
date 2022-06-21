@@ -147,4 +147,14 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   }
 };
 
-zeroFuel(100, 50, 1)
+zeroFuel(100, 50, 1);
+
+function repeatStr (n, s) {
+  let repeat = "";
+  for(let i = 1; i <= n; i++) {
+    repeat +=s;
+  }
+  return repeat;
+}
+
+repeatStr(2, "ha ");
