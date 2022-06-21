@@ -52,12 +52,12 @@ function sevenAte9(str){
     if(item == '9' && arr[i+1] == 7 && arr[i-1] == 7) {
       delete arr[i];
     }
-  })
-  let strNo9 = arr.join('')
-  return console.log (strNo9)
+  });
+  let strNo9 = arr.join('');
+  return console.log (strNo9);
 }
 
-sevenAte9('165561786121789797')
+sevenAte9('165561786121789797');
 
 function expressionMatter(a, b, c) {
   const arr = [];
@@ -65,13 +65,14 @@ function expressionMatter(a, b, c) {
   arr[1] = a * b * c;
   arr[2] =  a + b * c;
   arr[3] = (a + b) * c;
-  arr[4] = a + b + c
+  arr[4] = a + b + c;
   arr.sort(function(a, b) {
-    return a - b});
-  return console.log (arr[4])
+    return a - b;
+  });
+  return console.log (arr[4]);
 }
 
-expressionMatter(10, 5, 6)
+expressionMatter(10, 5, 6);
 
 function mergeArrays(arr1, arr2) {
  /*  let arr3 = [];
@@ -130,10 +131,10 @@ var stairs = [sunday,monday,tuesday,wednesday,thursday,friday,saturday];
 function stairsIn20(s){
   let stairs = 0;
   for (let i = 0; i < s.length; i++) {
-    s[i].forEach((item) => {
+    s[i].forEach((item) =>{
       stairs += item * 20;
-    })
-   };
+    });
+   }
   return console.log (stairs);
 }
 
@@ -161,7 +162,7 @@ repeatStr(2, "ha ");
 
 function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
   if (dolphin == true) {
-    sharkSpeed = sharkSpeed/2
+    sharkSpeed = sharkSpeed/2;
   }
   let timeDistance = pontoonDistance/youSpeed;
   let timeShark = sharkDistance/sharkSpeed;
