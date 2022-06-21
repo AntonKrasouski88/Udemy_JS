@@ -89,7 +89,7 @@ isBudgetEnough(shoppingMallData); */
 
 const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam',]; 
 
-function sortStudentsByGroups(arr) { // This task is not done!!!
+function sortStudentsByGroups(arr) {
     arr.sort();
     let arrGroup = [];
     let num = arr.length - Math.floor(arr.length/3)*3;

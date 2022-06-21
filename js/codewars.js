@@ -45,3 +45,16 @@ function squareOrSquareRoot(array) {
 }
 
 squareOrSquareRoot([4,3,9,7,2,1]);
+
+function sevenAte9(str){
+  let arr = str.split('');
+  arr.forEach((item, i)=> {
+    if(item == '9' && arr[i+1] == 7 && arr[i-1] == 7) {
+      delete arr[i];
+    }
+  })
+  let strNo9 = arr.join('')
+  return console.log (strNo9)
+}
+
+sevenAte9('165561786121789797')
