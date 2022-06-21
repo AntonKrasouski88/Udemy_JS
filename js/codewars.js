@@ -158,3 +158,20 @@ function repeatStr (n, s) {
 }
 
 repeatStr(2, "ha ");
+
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  if (dolphin == true) {
+    sharkSpeed = sharkSpeed/2
+  }
+  let timeDistance = pontoonDistance/youSpeed;
+  let timeShark = sharkDistance/sharkSpeed;
+  if(timeDistance < timeShark) {
+    return console.log ("Alive");
+  } else {
+    return console.log ("Shark Bait!");
+  }
+}
+
+shark(12, 50, 4, 8, true);
+shark(7, 55, 4, 16, true);
+shark(24, 0, 4, 8, true);
