@@ -138,3 +138,13 @@ function stairsIn20(s){
 }
 
 stairsIn20(stairs);
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  if(mpg * fuelLeft >= distanceToPump) {
+    return console.log (true);
+  } else {
+    return console.log(false);
+  }
+};
+
+zeroFuel(100, 50, 1)
