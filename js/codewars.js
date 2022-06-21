@@ -58,3 +58,17 @@ function sevenAte9(str){
 }
 
 sevenAte9('165561786121789797')
+
+function expressionMatter(a, b, c) {
+  const arr = [];
+  arr[0] =  a*(b + c);
+  arr[1] = a * b * c;
+  arr[2] =  a + b * c;
+  arr[3] = (a + b) * c;
+  arr[4] = a + b + c
+  arr.sort(function(a, b) {
+    return a - b});
+  return console.log (arr[4])
+}
+
+expressionMatter(10, 5, 6)
