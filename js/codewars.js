@@ -176,3 +176,25 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 shark(12, 50, 4, 8, true);
 shark(7, 55, 4, 16, true);
 shark(24, 0, 4, 8, true);
+
+function validateUsr(username) {
+  /**
+    - `^`        Start from the beginning of the string.
+    - `[]`       Allow any character specified, including...
+    - `a-z`      anything from a to z,
+    - `0-9`      anything from 0 to 9,
+    - `_`        and underscore.
+    - `{4,16}`   Accept 4 to 16 of allowed characters, both numbers included.
+    - `$`        End the string right after specified amount of allowed characters is given.
+  */
+  const validator = /^[a-z0-9_]{4,16}$/;
+  
+  return validator.test(username);
+}
+validateUsr('asddsa');
+validateUsr('a');
+validateUsr('Hass');
+validateUsr('');
+validateUsr('asd43 34');
+validateUsr('Hasd_12assssssasasasasasaasasasasas');
+validateUsr('____');
