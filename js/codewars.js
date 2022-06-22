@@ -198,3 +198,7 @@ validateUsr('');
 validateUsr('asd43 34');
 validateUsr('Hasd_12assssssasasasasasaasasasasas');
 validateUsr('____');
+
+String.prototype.isUpperCase = function() {
+  return this.toUpperCase() == this;
+} //Is the string uppercase?
