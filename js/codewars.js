@@ -202,3 +202,13 @@ validateUsr('____');
 String.prototype.isUpperCase = function() {
   return this.toUpperCase() == this;
 } //Is the string uppercase?
+
+//Find Maximum and Minimum Values of a List
+var min = function(list){ 
+  return Math.min(...list)
+}
+
+var max = function(list){
+  
+  return Math.max(...list)
+}
