@@ -205,10 +205,24 @@ String.prototype.isUpperCase = function() {
 
 //Find Maximum and Minimum Values of a List
 var min = function(list){ 
-  return Math.min(...list)
+  return Math.min(...list);
 }
 
 var max = function(list){
   
-  return Math.max(...list)
+  return Math.max(...list);
 }
+
+//Opposites Attract
+function lovefunc(flower1, flower2){
+ /*  if (flower1%2 == 0 && flower2%2 == 0 || flower1%2 == 1 && flower2%2 == 1) {
+    return console.log (false);
+  } else {
+    return console.log (true);
+  } */
+  return console.log (flower1 % 2 !== flower2 % 2);
+}
+
+lovefunc(1,4);
+lovefunc(2,4);
+lovefunc(691,815);
