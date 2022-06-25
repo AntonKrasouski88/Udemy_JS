@@ -243,4 +243,10 @@ function simpleMultiplication(n) {
 simpleMultiplication(2);
 simpleMultiplication(1);
 
-console.log(1%2);
+//Task:Count Odd Numbers below n
+function oddCount(n){
+  return Math.floor(n/2);
+}
+
+oddCount(15);
+oddCount(15023);
