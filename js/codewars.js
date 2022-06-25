@@ -128,7 +128,7 @@ saturday = [5448, 8041, 6573, 8104, 6208, 5912, 7927, 8909, 7000, 5059, 6412, 63
 
 var stairs = [sunday,monday,tuesday,wednesday,thursday,friday,saturday];
 
-function stairsIn20(s){
+/* function stairsIn20(s){
   let stairs = 0;
   for (let i = 0; i < s.length; i++) {
     s[i].forEach((item) =>{
@@ -138,7 +138,7 @@ function stairsIn20(s){
   return console.log (stairs);
 }
 
-stairsIn20(stairs);
+stairsIn20(stairs); */
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   if(mpg * fuelLeft >= distanceToPump) {
@@ -201,17 +201,17 @@ validateUsr('____');
 
 String.prototype.isUpperCase = function() {
   return this.toUpperCase() == this;
-} //Is the string uppercase?
+}; //Is the string uppercase?
 
 //Find Maximum and Minimum Values of a List
 var min = function(list){ 
   return Math.min(...list);
-}
+};
 
 var max = function(list){
   
   return Math.max(...list);
-}
+};
 
 //Opposites Attract
 function lovefunc(flower1, flower2){
@@ -226,3 +226,21 @@ function lovefunc(flower1, flower2){
 lovefunc(1,4);
 lovefunc(2,4);
 lovefunc(691,815);
+
+//Task: Simple multiplication
+/* function simpleMultiplication(number) {
+  if(number%2 == 0) {
+    return console.log (number*8);
+  } else { 
+    return console.log(number*9);
+  }
+} */
+
+function simpleMultiplication(n) {
+  return console.log (n * (n % 2 ? 9 : 8));
+}
+
+simpleMultiplication(2);
+simpleMultiplication(1);
+
+console.log(1%2);
