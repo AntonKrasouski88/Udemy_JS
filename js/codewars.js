@@ -250,3 +250,12 @@ function oddCount(n){
 
 oddCount(15);
 oddCount(15023);
+
+//Task:Square(n) Sum
+function squareSum(numbers){
+  let numSum = 0;
+  numbers.forEach((i) => numSum += i*i);
+  return numSum;
+}
+
+squareSum([0, 3, 4, 5]);
