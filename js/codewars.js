@@ -259,3 +259,22 @@ function squareSum(numbers){
 }
 
 squareSum([0, 3, 4, 5]);
+
+//Task:Moving Zeros To The End
+function moveZeros(arr) {
+  arr.forEach((i, j) =>  {
+    if (i === 0 && typeof i != Object) {
+     delete arr[j];
+     arr.push(0);
+    }
+  });
+  arr = arr.filter(function(num) {
+    return (num != undefined || num == null);
+  });
+  return console.log (arr);
+}
+/* var moveZeros = function (arr) {
+  return arr.filter(function(x) {return x !== 0}).concat(arr.filter(function(x) {return x === 0;}));
+} */
+
+moveZeros([1,2,0,1,0,1,0,3,0,1,false,{},[],null]);
