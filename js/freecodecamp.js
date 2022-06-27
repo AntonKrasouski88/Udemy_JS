@@ -111,3 +111,30 @@
 }
 
 testWhile(3);
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [a,b, ...arr] = list; // Change this line
+  // Only change code above this line
+  return console.log (arr);
+}
+const arr = removeFirstTwo(source);
+
+class Thermostat {
+  constructor(fahrenheit) {
+    this.fahrenheit = fahrenheit;
+  }
+  get temperature() {
+    return 5/9 * (this.fahrenheit - 32);
+  }
+  set temperature(celsius) {
+    return this.fahrenheit = celsius * 9.0 / 5 + 32 ;
+  }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
