@@ -129,7 +129,7 @@ class Thermostat {
     return 5/9 * (this.fahrenheit - 32);
   }
   set temperature(celsius) {
-    return this.fahrenheit = celsius * 9.0 / 5 + 32 ;
+    return (this.fahrenheit = celsius * 9.0 / 5 + 32);
   }
 }
 // Only change code above this line
@@ -138,3 +138,17 @@ const thermos = new Thermostat(76); // Setting in Fahrenheit scale
 let temp = thermos.temperature; // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+    makeServerRequest.then(result =>{
+      console.log(result);
+    });
+  } else {  
+    reject("Data not received");
+  }
+});
