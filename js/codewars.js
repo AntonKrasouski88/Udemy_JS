@@ -278,3 +278,10 @@ function moveZeros(arr) {
 } */
 
 moveZeros([1,2,0,1,0,1,0,3,0,1,false,{},[],null]);
+
+//Task: String Templates - Bug Fixing
+function buildString(...template){
+  return `I like ${template.join(', ')}!`;
+}
+
+buildString('Cheese','Milk','Chocolate');
