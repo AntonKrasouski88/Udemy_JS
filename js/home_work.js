@@ -207,3 +207,5 @@ for (let key in objectLearn) {
 console.log(Object.keys(objectLearn));
 const {films, game} = objectLearn.hobbies;
 console.log(films);
+
+console.log(typeof (!!"44444"));
