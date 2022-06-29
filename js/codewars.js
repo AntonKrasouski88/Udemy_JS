@@ -285,3 +285,10 @@ function buildString(...template){
 }
 
 buildString('Cheese','Milk','Chocolate');
+
+//Task: The Coupon Code
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  return console.log(enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate));
+}
+
+checkCoupon('123','123','September 5, 2014','October 1, 2014');
