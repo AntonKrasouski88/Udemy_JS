@@ -292,3 +292,22 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
 }
 
 checkCoupon('123','123','September 5, 2014','October 1, 2014');
+
+//Task: Compare within margin
+function closeCompare(a, b, margin){
+  if(!margin) {
+    margin = 0;
+  }
+  if (a + margin < b) {
+    return -1;
+  } else if (a - b <= margin) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
+
+closeCompare(3225, 7570, 4346);
+closeCompare(2, 5, 3);
+closeCompare(1.99, 5, 3);
