@@ -265,3 +265,15 @@ function transferWaitors(data) {
 }
 
 transferWaitors(restorantData);
+
+let words = ["Where", "do", "you", "want", "to", "go", "today"];
+
+let phrases = words.reduce(function(total, current, item) {
+    if(item == 0) {
+        return current;
+    } else {
+        return total + " " +current;
+    }
+}, '');
+
+console.log (phrases);
