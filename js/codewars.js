@@ -49,7 +49,7 @@ squareOrSquareRoot([4,3,9,7,2,1]);
 function sevenAte9(str){
   let arr = str.split('');
   arr.forEach((item, i)=> {
-    if(item == '9' && arr[i+1] == 7 && arr[i-1] == 7) {
+    if(item === '9' && arr[i+1] === 7 && arr[i-1] === 7) {
       delete arr[i];
     }
   });
@@ -97,7 +97,7 @@ function mergeArrays(arr1, arr2) {
 
 mergeArrays([1,3,5,7,9,11,12], [1,2,3,4,5,10,12]);
 
-var sunday = [6737, 7244, 5776, 9826, 7057, 9247, 5842, 5484, 6543, 5153, 6832, 8274,
+let sunday = [6737, 7244, 5776, 9826, 7057, 9247, 5842, 5484, 6543, 5153, 6832, 8274,
   7148, 6152, 5940, 8040, 9174, 7555, 7682, 5252, 8793, 8837, 7320, 8478, 6063, 
   5751, 9716, 5085, 7315, 7859, 6628, 5425, 6331, 7097, 6249, 8381, 5936, 8496, 
   6934, 8347, 7036, 6421, 6510, 5821, 8602, 5312, 7836, 8032, 9871, 5990, 6309, 7825],
@@ -126,7 +126,7 @@ saturday = [5448, 8041, 6573, 8104, 6208, 5912, 7927, 8909, 7000, 5059, 6412, 63
     5524, 9870, 6591, 8616, 5163, 6656, 8150, 8826, 6875, 5242, 9585, 9649, 9838, 
     7150, 6567, 8524, 7613, 7809, 5562, 7799, 7179, 5184, 7960, 9455, 5633, 9085];
 
-var stairs = [sunday,monday,tuesday,wednesday,thursday,friday,saturday];
+let stairs = [sunday,monday,tuesday,wednesday,thursday,friday,saturday];
 
 /* function stairsIn20(s){
   let stairs = 0;
@@ -311,3 +311,13 @@ function closeCompare(a, b, margin){
 closeCompare(3225, 7570, 4346);
 closeCompare(2, 5, 3);
 closeCompare(1.99, 5, 3);
+
+//Task: Sum Arrays
+function sum (numbers) {
+  return numbers.reduce((total,current) =>{
+    return total + current;
+  }, 0);
+}
+
+sum([]);
+sum([1, 5.2, 4, 0, -1]);
