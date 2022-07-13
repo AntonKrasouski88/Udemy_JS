@@ -321,3 +321,10 @@ function sum (numbers) {
 
 sum([]);
 sum([1, 5.2, 4, 0, -1]);
+
+//Task: Capitalization and Mutability
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.substr(1);
+}
+
+capitalizeWord('word');
