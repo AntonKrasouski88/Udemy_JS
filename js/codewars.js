@@ -328,3 +328,11 @@ function capitalizeWord(word) {
 }
 
 capitalizeWord('word');
+
+
+//Task:N-th Power
+function index(array, n){
+  return array[n] ? array[n]**n: -1;
+}
+
+index ([1, 3, 10, 100],3);
