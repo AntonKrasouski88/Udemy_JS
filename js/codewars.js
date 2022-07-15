@@ -336,3 +336,15 @@ function index(array, n){
 }
 
 index ([1, 3, 10, 100],3);
+
+/* Task: They say that only the name is long enough to attract attention. 
+They also said that only a simple Kata will have someone to solve it. 
+This is a sadly story #1: Are they opposite? */
+function isOpposite(s1,s2){
+  return (!s1 || !s2) ? false : s1 === s2.replace(/[a-z]/ig,(c) => c < 'a' ? c.toLowerCase() : c.toUpperCase());
+}
+
+isOpposite("ab","AB");
+isOpposite("aBcd","AbCD");
+isOpposite("","");
+isOpposite("aBcde","AbCD");
