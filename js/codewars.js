@@ -348,3 +348,15 @@ isOpposite("ab","AB");
 isOpposite("aBcd","AbCD");
 isOpposite("","");
 isOpposite("aBcde","AbCD");
+
+//Task: Find Multiples of a Number
+function findMultiples(integer, limit) {
+  let a = [];
+  for (let i = 1; i <= Math.floor(limit/integer); i++) {
+    a.push(integer*i);
+    
+}
+  console.log(a);
+}
+
+findMultiples(5, 27);
