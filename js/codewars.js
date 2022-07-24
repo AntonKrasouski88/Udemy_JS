@@ -349,5 +349,17 @@ isOpposite("aBcd","AbCD");
 isOpposite("","");
 isOpposite("aBcde","AbCD");
 
+
 //Task Quarter of the year
 const quarterOf = m => Math.ceil(m/3);
+
+function findMultiples(integer, limit) {
+  let a = [];
+  for (let i = 1; i <= Math.floor(limit/integer); i++) {
+    a.push(integer*i);
+    
+}
+  console.log(a);
+}
+
+findMultiples(5, 27);
