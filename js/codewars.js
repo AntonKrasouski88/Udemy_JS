@@ -348,3 +348,6 @@ isOpposite("ab","AB");
 isOpposite("aBcd","AbCD");
 isOpposite("","");
 isOpposite("aBcde","AbCD");
+
+//Task Quarter of the year
+const quarterOf = m => Math.ceil(m/3);
