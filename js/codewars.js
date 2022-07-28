@@ -379,3 +379,13 @@ return console.log(num);
 
 positiveSum([1,2,3,4,5]);
 positiveSum([1,-2,3,4,5]);
+
+//Remove String Spaces
+//Simple, remove the spaces from the string, then return the resultant string.
+function noSpace(x){
+  let arr = (x.split(""));
+  arr.forEach((i, item)=> i === " " ? delete arr[item]: i);
+  return arr.join("");
+  }
+  
+  noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
