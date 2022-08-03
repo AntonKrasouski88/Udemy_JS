@@ -389,3 +389,32 @@ function noSpace(x){
   }
   
   noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
+
+  function getCount(str) {
+    let count = 0;
+    let arr =str.split('');
+    arr.map((val) => {
+      if(val === "a" || val === "e" || val === "i" || val === "o" || val === "u") {
+        ++count;
+      }
+    }
+    );
+
+    return console.log(count);
+  }
+
+
+/*   function getCount(str) {
+  return str.split('').filter(c => "aeiouAEIOU".includes(c)).length; */
+
+/*   function getCount(str) {
+    return (str.match(/[aeiou]/ig)||[]).length;
+  } */
+
+  getCount('o a kak ushakov lil vo kashu kakao');
+
+  function disemvowel(str) {
+    return str.split('').filter(a=> !'aeiouAEIOU'.includes(a)).join('');
+  }
+
+  disemvowel("This website is for losers LOL!");

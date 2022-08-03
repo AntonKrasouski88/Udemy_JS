@@ -107,3 +107,16 @@ function sortStudentsByGroups(arr) {
 }
 
 sortStudentsByGroups(students);
+
+let shout = {
+    _message: "hello",
+    get message() {
+        return this._message;
+    }, 
+    set message(value) {
+        this._message = value.toUpperCase();
+    }
+};
+
+shout.message = "This camelcase";
+console.log(shout.message);
