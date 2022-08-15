@@ -443,3 +443,14 @@ function noSpace(x){
   } */
 
   squareDigits(3212);
+
+//Task: Highest and Lowest
+  function highAndLow(numbers) {
+    let arr = numbers.split(" ").filter(i => i !=" ").map(i => Number(i));
+    return `${Math.max.apply(null, arr)} ${Math.min.apply(null, arr)}`; 
+  }
+  /* function highAndLow(numbers){
+    numbers = numbers.split(' ');
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+  } */
+  highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4");
