@@ -418,3 +418,28 @@ function noSpace(x){
   }
 
   disemvowel("This website is for losers LOL!");
+
+
+  //Task: Square Every Digit
+  function squareDigits(num){
+    let arr =String(num).split('').map(i => {
+      parseInt(i);
+      return String(i *i);
+    }
+    /* let copyArr = arr.map(i => {
+      parseInt(i);
+      return String(i *i);
+    } */
+    
+      );
+      let nuber = Number(arr.join(''));
+
+    console.log (nuber);
+
+  }
+
+ /*  function squareDigits(num){
+    return +num.toString().split('').map(i => i*i).join('');
+  } */
+
+  squareDigits(3212);
