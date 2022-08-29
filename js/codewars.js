@@ -396,3 +396,11 @@ function noSpace(x){
 const even_or_odd = (number) => number%2 === 0 ? "Even" : "Odd";
 
 even_or_odd(2);
+
+//Task: Return Negative
+const makeNegative = (num) => num > 0 ? -num: num;
+
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12
