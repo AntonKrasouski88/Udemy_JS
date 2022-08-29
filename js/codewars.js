@@ -391,16 +391,8 @@ function noSpace(x){
   noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
 
 
-  function countSheeps(arrayOfSheep) {
-    let count = 0;
-    arrayOfSheep.map(i=> i ? ++count: i)
-    console.log(count); 
-  }
-  countSheeps([true,  true,  true,  false,
-    true,  true,  true,  true ,
-    true,  false, true,  false,
-    true,  false, false, true ,
-    true,  true,  true,  true ,
-    false, false, true,  true ]);
+  
+//Task: Even or Odd
+const even_or_odd = (number) => number%2 === 0 ? "Even" : "Odd";
 
-
+even_or_odd(2);
