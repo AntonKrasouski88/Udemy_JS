@@ -404,3 +404,16 @@ makeNegative(1);    // return -1
 makeNegative(-5);   // return -5
 makeNegative(0);    // return 0
 makeNegative(0.12); // return -0.12
+
+
+//Task: Descending Order
+
+let descendingOrder = (n) => {
+  return +String(n).split('').map(value=> Number(value)).sort((a,b)=> b - a).join('')
+}
+
+/* function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+ */
+descendingOrder(0)
