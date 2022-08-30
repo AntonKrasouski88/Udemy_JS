@@ -416,4 +416,13 @@ let descendingOrder = (n) => {
   return parseInt(String(n).split('').sort().reverse().join(''))
 }
  */
-descendingOrder(0)
+descendingOrder(0);
+
+
+//Task: Mumbling
+function accum(s) {
+	let arr = s.split('').map((val, i) => val.toUpperCase() + val.repeat(i).toLowerCase()).join('-');
+  console.log (arr)
+}
+
+accum("abcd");
