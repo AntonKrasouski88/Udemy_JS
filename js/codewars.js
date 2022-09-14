@@ -443,3 +443,13 @@ getMiddle("testing");
 getMiddle("middle");
 
 getMiddle("A");
+
+//Task: You're a square!
+const isSquare = (n) => Number.isInteger(Math.sqrt(n))
+
+isSquare(-1);
+isSquare( 0);
+isSquare( 3);
+isSquare( 4);
+isSquare(25);
+isSquare(26);
