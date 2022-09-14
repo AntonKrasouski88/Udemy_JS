@@ -426,3 +426,20 @@ function accum(s) {
 }
 
 accum("abcd");
+
+//Task: Get the Middle Character
+
+function getMiddle(s)
+{
+  if(s.length%2 === 0) {
+   console.log (s.slice((s.length/2)-1, (s.length/2)+1))
+  } else {console.log(s.slice(Math.ceil(s.length/2)-1, Math.ceil(s.length/2)))}
+}
+
+getMiddle("test");
+
+getMiddle("testing");
+
+getMiddle("middle");
+
+getMiddle("A");
