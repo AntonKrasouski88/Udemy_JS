@@ -453,3 +453,14 @@ isSquare( 3);
 isSquare( 4);
 isSquare(25);
 isSquare(26);
+
+//List Filtering
+function filter_list(l) {
+  const newVal = l.filter(val=> typeof (val) === 'number')
+  console.log(newVal);
+}
+
+
+filter_list([1,2,'a','b'])
+filter_list([1,'a','b',0,15])
+filter_list([1,2,'aasf','1','123',123])
