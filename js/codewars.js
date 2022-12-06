@@ -482,9 +482,15 @@ boolToWord(false);
 
 //Task: Opposite number
 
-const opposite = number  => number === 0 ? console.log(0): console.log(number * -1)  
+const opposite = number  => number === 0 ? console.log(0): console.log(number * -1);  
 /* function opposite(number) {
   return(-number);
 } */
 
-opposite(1)
+opposite(1);
+
+//Task: Convert a Number to a String!
+function numberToString(num) {
+  return `${num}`;
+}
+numberToString(67);
