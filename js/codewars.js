@@ -479,3 +479,12 @@ const boolToWord = bool => bool ?  console.log('Yes'): console.log('No');
 
 boolToWord(true);
 boolToWord(false);
+
+//Task: Opposite number
+
+const opposite = number  => number === 0 ? console.log(0): console.log(number * -1)  
+/* function opposite(number) {
+  return(-number);
+} */
+
+opposite(1)
