@@ -473,3 +473,9 @@ function solution(str){
 }
 
 solution('world')
+
+//Task: Convert boolean values to strings 'Yes' or 'No'.
+const boolToWord = bool => bool ?  console.log('Yes'): console.log('No');
+
+boolToWord(true);
+boolToWord(false);
