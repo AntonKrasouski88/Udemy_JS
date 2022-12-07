@@ -494,3 +494,8 @@ function numberToString(num) {
   return `${num}`;
 }
 numberToString(67);
+
+//Task: Remove First and Last Character
+const removeChar = (str) => console.log(str.substr(1, (str.length-2))); //str.slice(1, -1)
+
+removeChar('eloquent');
