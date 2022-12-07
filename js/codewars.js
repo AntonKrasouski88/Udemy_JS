@@ -499,3 +499,15 @@ numberToString(67);
 const removeChar = (str) => console.log(str.substr(1, (str.length-2))); //str.slice(1, -1)
 
 removeChar('eloquent');
+
+//Task: Grasshopper - Summation
+let summation = function (num) {
+  let a = 0;
+  for (let i = 0; i <= num; i++) {
+      a = a + i 
+      }
+      console.log(a)
+  }
+ //const summation = n => n * (n + 1) / 2;
+
+summation(8); //36
