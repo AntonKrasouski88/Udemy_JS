@@ -511,3 +511,10 @@ let summation = function (num) {
  //const summation = n => n * (n + 1) / 2;
 
 summation(8); //36
+
+//Find the smallest integer in the array
+function findSmallestInt(args) {  //args.sort(function(a,b) {return a-b}) 
+  return Math.min(...args);
+}
+
+findSmallestInt([78,56,232,12,8])
