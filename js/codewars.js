@@ -518,3 +518,10 @@ function findSmallestInt(args) {  //args.sort(function(a,b) {return a-b})
 }
 
 findSmallestInt([78,56,232,12,8])
+
+function century(year) {
+  return console.log(Math.ceil(year/100));
+}
+
+century(1705);
+century(89);
