@@ -461,18 +461,18 @@ function filterList(l) {
 }
 
 
-filter_list([1,2,'a','b'])
-filter_list([1,'a','b',0,15])
-filter_list([1,2,'aasf','1','123',123])
+filterList([1,2,'a','b']);
+filterList([1,'a','b',0,15]);
+filterList([1,2,'aasf','1','123',123]);
 
 
 //Task: Reversed Strings
 function solution(str){
     const reverseStr = str.split('').reverse().join('');
-    console.log(reverseStr)
+    console.log(reverseStr);
 }
 
-solution('world')
+solution('world');
 
 //Task: Convert boolean values to strings 'Yes' or 'No'.
 const boolToWord = bool => bool ?  console.log('Yes'): console.log('No');
@@ -504,10 +504,10 @@ removeChar('eloquent');
 let summation = function (num) {
   let a = 0;
   for (let i = 0; i <= num; i++) {
-      a = a + i 
+      a = a + i; 
       }
-      console.log(a)
-  }
+      console.log(a);
+  };
  //const summation = n => n * (n + 1) / 2;
 
 summation(8); //36
@@ -517,7 +517,7 @@ function findSmallestInt(args) {  //args.sort(function(a,b) {return a-b})
   return Math.min(...args);
 }
 
-findSmallestInt([78,56,232,12,8])
+findSmallestInt([78,56,232,12,8]);
 
 function century(year) {
   return console.log(Math.ceil(year/100));
