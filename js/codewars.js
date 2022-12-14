@@ -393,9 +393,9 @@ function noSpace(x){
 
   
 //Task: Even or Odd
-const even_or_odd = (number) => number%2 === 0 ? "Even" : "Odd";
+const evenOrOdd = (number) => number%2 === 0 ? "Even" : "Odd";
 
-even_or_odd(2);
+evenOrOdd(2);
 
 //Task: Return Negative
 const makeNegative = (num) => num > 0 ? -num: num;
@@ -409,8 +409,8 @@ makeNegative(0.12); // return -0.12
 //Task: Descending Order
 
 let descendingOrder = (n) => {
-  return +String(n).split('').map(value=> Number(value)).sort((a,b)=> b - a).join('')
-}
+  return +String(n).split('').map(value=> Number(value)).sort((a,b)=> b - a).join('');
+};
 
 /* function descendingOrder(n){
   return parseInt(String(n).split('').sort().reverse().join(''))
@@ -422,7 +422,7 @@ descendingOrder(0);
 //Task: Mumbling
 function accum(s) {
 	let arr = s.split('').map((val, i) => val.toUpperCase() + val.repeat(i).toLowerCase()).join('-');
-  console.log (arr)
+  console.log (arr);
 }
 
 accum("abcd");
@@ -432,8 +432,8 @@ accum("abcd");
 function getMiddle(s)
 {
   if(s.length%2 === 0) {
-   console.log (s.slice((s.length/2)-1, (s.length/2)+1))
-  } else {console.log(s.slice(Math.ceil(s.length/2)-1, Math.ceil(s.length/2)))}
+   console.log (s.slice((s.length/2)-1, (s.length/2)+1));
+  } else {console.log(s.slice(Math.ceil(s.length/2)-1, Math.ceil(s.length/2)));}
 }
 
 getMiddle("test");
@@ -445,7 +445,7 @@ getMiddle("middle");
 getMiddle("A");
 
 //Task: You're a square!
-const isSquare = (n) => Number.isInteger(Math.sqrt(n))
+const isSquare = (n) => Number.isInteger(Math.sqrt(n));
 
 isSquare(-1);
 isSquare( 0);
@@ -455,12 +455,26 @@ isSquare(25);
 isSquare(26);
 
 //List Filtering
-function filter_list(l) {
-  const newVal = l.filter(val=> typeof (val) === 'number')
+function filterList(l) {
+  const newVal = l.filter(val=> typeof (val) === 'number');
   console.log(newVal);
 }
 
 
-filter_list([1,2,'a','b'])
-filter_list([1,'a','b',0,15])
-filter_list([1,2,'aasf','1','123',123])
+filterList([1,2,'a','b']);
+filterList([1,'a','b',0,15]);
+filterList([1,2,'aasf','1','123',123]);
+
+//Function 2 - squaring an argument
+const squareArgument = (n) => console.log(n**2); //
+
+squareArgument(3);
+
+//Remove exclamation marks
+function removeExclamationMarks(s) {
+  //let remove = s.split('').filter(mark => mark !== '!' ? mark : '').join('');
+  //s.replace(/!/g, '')
+  return console.log(s.replace(/!/g, ''));
+}
+
+removeExclamationMarks('Hello World!');
