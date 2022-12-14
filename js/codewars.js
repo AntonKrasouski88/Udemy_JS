@@ -525,3 +525,8 @@ function century(year) {
 
 century(1705);
 century(89);
+
+//Task: Remove exclamation marks
+function removeExclamationMarks(s) {
+  return s.replace(/!/gi, '');
+}
