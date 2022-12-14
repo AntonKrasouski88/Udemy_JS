@@ -461,20 +461,67 @@ function filterList(l) {
 }
 
 
-filterList([1,2,'a','b']);
-filterList([1,'a','b',0,15]);
-filterList([1,2,'aasf','1','123',123]);
+filter_list([1,2,'a','b'])
+filter_list([1,'a','b',0,15])
+filter_list([1,2,'aasf','1','123',123])
 
-//Function 2 - squaring an argument
-const squareArgument = (n) => console.log(n**2); //
 
-squareArgument(3);
-
-//Remove exclamation marks
-function removeExclamationMarks(s) {
-  //let remove = s.split('').filter(mark => mark !== '!' ? mark : '').join('');
-  //s.replace(/!/g, '')
-  return console.log(s.replace(/!/g, ''));
+//Task: Reversed Strings
+function solution(str){
+    const reverseStr = str.split('').reverse().join('');
+    console.log(reverseStr)
 }
 
-removeExclamationMarks('Hello World!');
+solution('world')
+
+//Task: Convert boolean values to strings 'Yes' or 'No'.
+const boolToWord = bool => bool ?  console.log('Yes'): console.log('No');
+
+boolToWord(true);
+boolToWord(false);
+
+//Task: Opposite number
+
+const opposite = number  => number === 0 ? console.log(0): console.log(number * -1);  
+/* function opposite(number) {
+  return(-number);
+} */
+
+opposite(1);
+
+//Task: Convert a Number to a String!
+function numberToString(num) {
+  return `${num}`;
+}
+numberToString(67);
+
+//Task: Remove First and Last Character
+const removeChar = (str) => console.log(str.substr(1, (str.length-2))); //str.slice(1, -1)
+
+removeChar('eloquent');
+
+//Task: Grasshopper - Summation
+let summation = function (num) {
+  let a = 0;
+  for (let i = 0; i <= num; i++) {
+      a = a + i 
+      }
+      console.log(a)
+  }
+ //const summation = n => n * (n + 1) / 2;
+
+summation(8); //36
+
+//Find the smallest integer in the array
+function findSmallestInt(args) {  //args.sort(function(a,b) {return a-b}) 
+  return Math.min(...args);
+}
+
+findSmallestInt([78,56,232,12,8])
+
+function century(year) {
+  return console.log(Math.ceil(year/100));
+}
+
+century(1705);
+century(89);
