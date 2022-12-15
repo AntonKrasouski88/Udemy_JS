@@ -530,3 +530,16 @@ century(89);
 function removeExclamationMarks(s) {
   return s.replace(/!/gi, '');
 }
+
+removeExclamationMarks('Hello World!');
+
+//Localize The Barycenter of a Triangle
+function barTriang(p1, p2, p3){
+  let arr = [];
+  for(let i = 0; i < p1.length; i++) {
+   arr.push(+((p1[i]+p2[i]+p3[i])/3).toFixed(3)); 
+  }
+  return arr;
+}
+
+barTriang([4, 6], [12, 4], [10, 10]);
