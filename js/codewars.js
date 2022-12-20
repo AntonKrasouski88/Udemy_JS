@@ -569,3 +569,9 @@ function abbrevName(name){
 
 abbrevName("Sam Harris");
 abbrevName("P Favuzzi");
+
+//Task: Keep Hydrated!
+
+const litres = (time) => Math.floor(time * 0.5);
+
+litres(12.3);
