@@ -543,3 +543,18 @@ function barTriang(p1, p2, p3){
 }
 
 barTriang([4, 6], [12, 4], [10, 10]);
+
+//Task:Basic Mathematical Operations
+const basicOp = (operation, value1, value2) => {
+    let cases = {
+      '+': value1 + value2,
+      '-': value1 - value2,
+      '*': value1 * value2,
+      '/': value1 / value2
+    };
+    return cases[operation];
+  
+  //return eval(value1 + operation+value2);
+};
+
+basicOp('+', 4, 7);
