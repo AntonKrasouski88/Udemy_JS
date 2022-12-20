@@ -560,10 +560,11 @@ const basicOp = (operation, value1, value2) => {
 basicOp('+', 4, 7);
 
 //Task: Abbreviate a Two Word Name
-
 function abbrevName(name){
-  let arr = name.split(' ').map(item => item.substr(0,1).toUpperCase()).join('.') + `.`;
-  console.log(arr);
+  //let arr = name.split(' ').map(item => item.substr(0,1).toUpperCase()).join('.') + `.`;
+  //console.log(arr);
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
 
 abbrevName("Sam Harris");
