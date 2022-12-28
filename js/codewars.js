@@ -575,3 +575,29 @@ abbrevName("P Favuzzi");
 const litres = (time) => Math.floor(time * 0.5);
 
 litres(12.3);
+
+//Task: Shortest Word
+function findShort(s){
+  let wordMin = Math.min(...s.split(' ').map(item  => item.length));
+  console.log(wordMin);
+}
+
+findShort("bitcoin take over the world maybe who knows perhaps");
+
+
+//Task Credit Card Mask
+function maskify(cc) {
+  let arr = cc.split('');
+  if(arr.length > 4) {
+    for(let i = 0; i < arr.length-4; i++) {
+      arr[i] = '#';
+    }
+  }
+  return arr.join('');
+}
+
+//cc.replace(/.(?=....)/g, '#'); 
+
+maskify('4556364607935616');
+maskify('1');
+maskify('11111');
