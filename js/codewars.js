@@ -601,3 +601,23 @@ function maskify(cc) {
 maskify('4556364607935616');
 maskify('1');
 maskify('11111');
+
+//Task: Does my number look big in this?
+
+/* function narcissistic(value) {
+  let arr = value.toString().split('');
+  let a = arr.length;
+  let num = arr.reduce((acc, item)=>{
+    return  acc + Math.pow(item, arr.length);
+  },0);
+  console.log(num);
+} */
+
+const narcissistic = (value) => value.toString().split('').reduce((a,b,i,arr)=>{
+  return  a + Math.pow(b, arr.length);
+  
+},0);
+
+
+console.log(narcissistic( 7 ));
+console.log(narcissistic( 371 ));
