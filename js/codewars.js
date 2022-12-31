@@ -621,3 +621,9 @@ const narcissistic = (value) => value.toString().split('').reduce((a,b,i,arr)=>{
 
 console.log(narcissistic( 7 ));
 console.log(narcissistic( 371 ));
+
+//Beginner - Reduce but Grow
+
+const grow = (x) => x.reduce((acc, item)=>acc*item);
+
+console.log(grow([4, 1, 1, 1, 4]));
