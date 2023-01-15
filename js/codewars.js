@@ -627,3 +627,16 @@ console.log(narcissistic( 371 ));
 const grow = (x) => x.reduce((acc, item)=>acc*item);
 
 console.log(grow([4, 1, 1, 1, 4]));
+
+//Task: Reversed Words
+
+function reverseWords(str){
+  str.split(' ').reverse().join(' '); // reverse those words
+}
+
+reverseWords("hello world!");
+reverseWords("yoda doesn't speak like this");
+reverseWords("foobar");
+reverseWords("kata editor");
+reverseWords("row row row your boat");
+reverseWords("");
