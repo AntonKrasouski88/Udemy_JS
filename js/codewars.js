@@ -640,3 +640,12 @@ reverseWords("foobar");
 reverseWords("kata editor");
 reverseWords("row row row your boat");
 reverseWords("");
+
+//Task: Filter out the geese
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(e => !~geese.indexOf(e));
+  //return birds.filter(b => !geese.includes(b));
+}
+
+console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
