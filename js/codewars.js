@@ -649,3 +649,10 @@ function gooseFilter (birds) {
 }
 
 console.log(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]));
+
+//Task: Convert a String to a Number!
+let stringToNumber = function(str){
+  return parseInt(str);
+};
+
+console.log(stringToNumber("1234"));
