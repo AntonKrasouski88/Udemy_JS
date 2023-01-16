@@ -656,3 +656,11 @@ let stringToNumber = function(str){
 };
 
 console.log(stringToNumber("1234"));
+
+//Task: Convert number to reversed array of digits
+function digitize(n) {
+  return JSON.stringify(n).split('').reverse().map(a=>parseInt(a));
+  //return Array.from(String(n), Number).reverse();
+}
+
+console.log(digitize(35231));
