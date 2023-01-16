@@ -664,3 +664,10 @@ function digitize(n) {
 }
 
 console.log(digitize(35231));
+
+//Task: Is n divisible by x and y?
+const isDivisible = (n, x, y) => Number.isInteger(n/x) && Number.isInteger(n/y);
+console.log(isDivisible(3,3,4));
+console.log(isDivisible(12,3,4));
+console.log(isDivisible(8,3,4));
+console.log(isDivisible(48,3,4));
