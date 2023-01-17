@@ -686,3 +686,18 @@ console.log(spinWords("This is another test"));
 console.log(spinWords("You are almost to the last test"));
 console.log(spinWords("Just kidding there is still one more"));
 console.log(spinWords("Seriously this is the last one"));
+
+function findOdd(a) {
+  /* let b = a.reduce((acc,el)=> {
+    acc[el] = (acc[el] || 0) +1;
+    return acc;
+  }, {});
+  let ret = Object.keys(b);
+  let value = Object.values(b);
+  return +value.map((item, i) => item%2 !== 0 ? ret[i] : '').filter(item => item !== '').join(); */
+  return a.find((item, index) => a.filter(el => el == item).length % 2); //return a.reduce((a, b) => a ^ b);
+  
+}
+
+console.log(findOdd([1,2,2,3,3,3,-1,3,3,3,2,2,1]));
+console.log(findOdd([-1,-1,-2,-2,1,1,2,2,20,20,3,3,4,4,5,5,5]));
