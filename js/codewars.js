@@ -671,3 +671,18 @@ console.log(isDivisible(3,3,4));
 console.log(isDivisible(12,3,4));
 console.log(isDivisible(8,3,4));
 console.log(isDivisible(48,3,4));
+
+
+//Task: Stop gninnipS My sdroW!
+function spinWords(string){
+   return string.split(' ').map(item=>item.length >= 5 ? item.split('').reverse().join(''): item).join(" ");
+
+}
+
+console.log(spinWords("Welcome"));
+console.log(spinWords("Hey fellow warriors"));
+console.log(spinWords("This is a test"));
+console.log(spinWords("This is another test"));
+console.log(spinWords("You are almost to the last test"));
+console.log(spinWords("Just kidding there is still one more"));
+console.log(spinWords("Seriously this is the last one"));
