@@ -701,3 +701,14 @@ function findOdd(a) {
 
 console.log(findOdd([1,2,2,3,3,3,-1,3,3,3,2,2,1]));
 console.log(findOdd([-1,-1,-2,-2,1,1,2,2,20,20,3,3,4,4,5,5,5]));
+
+//Task: Sum of Digits / Digital Root
+function digitalRoot(n) {
+  if(String(n).length === 1) { //return (n - 1) % 9 + 1;
+    return n;
+  } else {
+    return digitalRoot(String(n).split('').reduce((acc, el)=> {return acc + (+el);},0));
+}
+}
+console.log(digitalRoot(16));
+console.log(digitalRoot(456));
