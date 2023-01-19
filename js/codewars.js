@@ -734,3 +734,15 @@ console.log(likes(['Peter']));
 console.log(likes(['Jacob', 'Alex']));
 console.log(likes(['Max', 'John', 'Mark']));
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
+
+//Task Array.diff
+function arrayDiff(a, b) {
+  return a.filter(el=> !~b.indexOf(el)); //return a.filter(e => !b.includes(e));
+}
+
+console.log(arrayDiff([1,2], [1]));
+console.log(arrayDiff([1,2,2], [1]));
+console.log(arrayDiff([1,2,2], [2]));
+console.log(arrayDiff([1,2,2], []));
+console.log(arrayDiff([], [1,2]));
+console.log(arrayDiff([1,2,3], [1,2]));
