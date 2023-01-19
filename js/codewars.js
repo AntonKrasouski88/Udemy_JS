@@ -712,3 +712,25 @@ function digitalRoot(n) {
 }
 console.log(digitalRoot(16));
 console.log(digitalRoot(456));
+
+//Task: Who likes it?
+function likes(names) {
+  switch (names.length) {
+    case 0:
+      return "no one likes this";
+    case 1:
+      return `${names.join('')} likes this`;
+    case 2:
+      return `${names.join(' and ')} like this`;
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${names.length-2} others like this`;
+  }
+}
+
+console.log(likes([]));
+console.log(likes(['Peter']));
+console.log(likes(['Jacob', 'Alex']));
+console.log(likes(['Max', 'John', 'Mark']));
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
