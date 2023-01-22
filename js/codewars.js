@@ -756,3 +756,24 @@ function createPhoneNumber(numbers){
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
 console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+//Task: Exes and Ohs
+function XO(str) {
+   let obj = str.toLowerCase().split('').reduce((acc,el)=>{
+    if (el === 'x' || el === 'o') {
+      acc[el] = (acc[el] || 0) +1;
+    }
+    return acc;
+  },{});
+    let value = Object.values(obj);
+    return value[0] === value[1];
+    /*  let x = str.match(/x/gi);
+        let o = str.match(/o/gi);
+        return (x && x.length) === (o && o.length); */
+}
+
+console.log(XO('xo'));
+console.log(XO("xxOo"));
+console.log(XO("xxxm"));
+console.log(XO("Oo"));
+console.log(XO("ooom"));
