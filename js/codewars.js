@@ -777,3 +777,27 @@ console.log(XO("xxOo"));
 console.log(XO("xxxm"));
 console.log(XO("Oo"));
 console.log(XO("ooom"));
+
+
+const isEvenIndexSumGreater = (arr) => {
+  //...здесь пишем код.
+  // В return стоит "заглушка", чтоб typescript не ругался
+  let arr1 = arr.filter(el => el%2 !== 0).reduce((acc, el)=> acc + el);
+  let arr2 = arr.filter(el => el%2 === 0 || 0).reduce((acc, el)=> acc + el);
+  console.log(arr1, arr2);
+  return arr1>arr2;
+};
+
+
+isEvenIndexSumGreater([1, 100, 2, 200]);
+isEvenIndexSumGreater([100, 1, 200, 2]);
+isEvenIndexSumGreater([100, 1, 200, 2, 300, 4]);
+isEvenIndexSumGreater([100, 1, 200, 2, 4]);
+
+function getSquarePositiveIntegers(array) {
+  //...здесь пишем код.
+  // В return стоит "заглушка", чтоб typescript не ругался 
+  return array.filter(el => Number.isInteger(el) && el%2===0 && el>0 ? el: '').map(el => Math.pow(el,2));
+}
+
+console.log(getSquarePositiveIntegers([4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]));
