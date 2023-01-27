@@ -801,3 +801,18 @@ function getSquarePositiveIntegers(array) {
 }
 
 console.log(getSquarePositiveIntegers([4, 5.6, -9.8, 3.14, 10, 6, 8.34, -2]));
+
+//Task: A Needle in the Haystack
+
+function findNeedle(haystack) {
+  /* for(let i = 0; i<haystack.length-1; i++) {
+    if(haystack[i] === 'needle') {
+      return `found the needle at position ${i}`;
+    }
+  } */
+
+  return `found the needle at position ${haystack.indexOf('needle')}`;
+
+}
+
+console.log(findNeedle(['3', '123124234', 22, 'needle', 'world', 'hay', 2, '3', true, false]));
