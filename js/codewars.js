@@ -816,3 +816,12 @@ function findNeedle(haystack) {
 }
 
 console.log(findNeedle(['3', '123124234', 22, 'needle', 'world', 'hay', 2, '3', true, false]));
+
+//Task: Returning Strings
+
+function greet(name){
+  return `Hello, ${name} how are you doing today?`;
+}
+
+console.log(greet("Ryan"));
+console.log(greet("Shingles"));
