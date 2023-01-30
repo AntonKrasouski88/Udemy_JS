@@ -838,3 +838,29 @@ console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]));
 console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7]));
 console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]));
 console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]));
+
+function getSum(a, b)
+{
+   if(a !== b && a < b) {
+    let sum = 0;  
+    for(let i = a; i <=b; i++) {
+        sum += i;
+     } 
+     return sum;
+   } else {
+    let sum = 0;  
+    for(let i = b; i <=a; i++) {
+        sum += i;
+     } 
+     return sum;
+   }
+
+   /* let min = Math.min(a, b),
+          max = Math.max(a, b);
+      return (max - min + 1) * (min + max) / 2; */
+}
+
+console.log(getSum(-1, 2));
+console.log(getSum(0, -1));
+
+console.log (Math.min(0, -1));
