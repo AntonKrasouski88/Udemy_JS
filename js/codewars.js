@@ -865,3 +865,17 @@ console.log(getSum(-1, 2));
 console.log(getSum(0, -1));
 
 console.log (Math.min(0, -1));
+
+//Task: Debug Sum of Digits of a Number
+function getSumOfDigits(integer) {
+  var sum = null;
+  var digits =  integer.toString();
+  for(var ix = 0; ix < digits.length; ix++) {
+    sum +=(+digits[ix]);
+  }
+  return sum;
+}
+
+console.log(getSumOfDigits(123));
+console.log(getSumOfDigits(223));
+console.log(getSumOfDigits(0));
