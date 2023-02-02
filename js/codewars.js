@@ -879,3 +879,23 @@ function getSumOfDigits(integer) {
 console.log(getSumOfDigits(123));
 console.log(getSumOfDigits(223));
 console.log(getSumOfDigits(0));
+
+//Task Isogram
+function isIsogram(str){
+  let arr =  str.toLowerCase().split('').sort().filter((el, i, arr)=> el === arr[i+1]);
+  console.log( new Set(str.toLowerCase()));
+  if(arr.length === 0) {
+    return true;
+  } else {
+    return false;
+  }
+  //return new Set(str.toUpperCase()).size == str.length;
+  //return !/(\w).*\1/i.test(str)
+}
+
+console.log(isIsogram("Dermatoglyphics"));
+console.log(isIsogram("isogram"));
+console.log(isIsogram("aba"));
+console.log(isIsogram("moOse"));
+console.log(isIsogram("isIsogram"));
+console.log(isIsogram(""));
