@@ -899,3 +899,11 @@ console.log(isIsogram("aba"));
 console.log(isIsogram("moOse"));
 console.log(isIsogram("isIsogram"));
 console.log(isIsogram(""));
+
+//Task: Convert Boolen to string
+function booleanToString(b){
+  return `${b}`;
+}
+
+console.log(booleanToString(true));
+console.log(booleanToString(false));
