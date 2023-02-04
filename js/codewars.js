@@ -907,3 +907,14 @@ function booleanToString(b){
 
 console.log(booleanToString(true));
 console.log(booleanToString(false));
+
+
+//Task: Invert values
+function invert(array) {
+  return array.map(el=> el * -1);
+}
+
+console.log(invert([1,2,3,4,5]));
+console.log(invert([1,-2,3,-4,5]));
+console.log(invert([]));
+console.log(invert([0]));
