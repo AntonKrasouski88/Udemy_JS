@@ -918,3 +918,18 @@ console.log(invert([1,2,3,4,5]));
 console.log(invert([1,-2,3,-4,5]));
 console.log(invert([]));
 console.log(invert([0]));
+
+
+//Task: Multiples of 3 or 5
+function solution(number){
+  let a = 0;
+    for(let i = 3; i < number; i++) {
+      if (i%3 === 0 || i%5 === 0) {
+        a+=i;
+      }
+    }
+    return a;
+}
+console.log(solution(10));
+console.log(solution(23));
+console.log(solution(-1));
