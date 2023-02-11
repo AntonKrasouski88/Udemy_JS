@@ -152,3 +152,19 @@ const makeServerRequest = new Promise((resolve, reject) => {
     reject("Data not received");
   }
 });
+//Regular expressions
+//1
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString); // Change this line
+console.log(result);
+//2
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/;
+let result1 = waldoRegex.test(waldoIsHiding);
+console.log(result1);
+//3
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/;
+let result2 =petRegex.test(petString);
+console.log(result2);
