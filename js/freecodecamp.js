@@ -168,3 +168,18 @@ let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/;
 let result2 =petRegex.test(petString);
 console.log(result2);
+//4
+let myString1 = "freeCodeCamp";
+let fccRegex = /freecodecamp/i;
+let result3 = fccRegex.test(myString1);
+console.log(result3);
+//5
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/;
+let result4 = extractStr.match(codingRegex);
+console.log(result4);
+//6
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/ig;
+let result5 = twinkleStar.match(starRegex);
+console.log(result5);
