@@ -175,7 +175,7 @@ let result3 = fccRegex.test(myString1);
 console.log(result3);
 //5
 let extractStr = "Extract the word 'coding' from this string.";
-let codingRegex = /coding/;
+let codingRegex = /coding/ig;
 let result4 = extractStr.match(codingRegex);
 console.log(result4);
 //6
@@ -183,3 +183,18 @@ let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /twinkle/ig;
 let result5 = twinkleStar.match(starRegex);
 console.log(result5);
+//7
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/gi;
+let result6 = unRegex.test(exampleStr);
+console.log(result6); 
+//8
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi;
+let result7 = quoteSample.match(vowelRegex);
+console.log(result7); 
+//9
+let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;
+let result8 = quoteSample1.match(alphabetRegex);
+console.log(result8); 
