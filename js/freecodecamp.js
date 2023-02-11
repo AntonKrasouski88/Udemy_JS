@@ -198,3 +198,13 @@ let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]/gi;
 let result8 = quoteSample1.match(alphabetRegex);
 console.log(result8); 
+//10
+let quoteSample2 = "Blueberry 3.141592653s are delicious.";
+let myRegex2 = /[h-s2-6]/gi;
+let result9 = quoteSample2.match(myRegex2);
+console.log(result9);
+//11
+let quoteSample3 = "3 blind mice.";
+let myRegex3 = /[^aeiou1-9]/gi;
+let result10 = quoteSample3.match(myRegex3);
+console.log(result10); 
