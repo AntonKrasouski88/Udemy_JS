@@ -210,6 +210,11 @@ let result10 = quoteSample3.match(myRegex3);
 console.log(result10); 
 //12 Match Characters that Occur One or More Times
 let difficultSpelling = "Mississippi";
-let myRegex4 = /s+/gi; // Change this line
+let myRegex4 = /s+/gi; 
 let result11 = difficultSpelling.match(myRegex4);
 console.log(result11);
+//13 Match Characters that Occur Zero or More Times
+let chewieQuote = 'Aaaaaaaaaaaaaaaarrrgh!';
+let chewieRegex = /Aa*/;
+let result12 = chewieQuote.match(chewieRegex);
+console.log(result12);
