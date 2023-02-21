@@ -208,3 +208,8 @@ let quoteSample3 = "3 blind mice.";
 let myRegex3 = /[^aeiou1-9]/gi;
 let result10 = quoteSample3.match(myRegex3);
 console.log(result10); 
+//12 Match Characters that Occur One or More Times
+let difficultSpelling = "Mississippi";
+let myRegex4 = /s+/gi; // Change this line
+let result11 = difficultSpelling.match(myRegex4);
+console.log(result11);
