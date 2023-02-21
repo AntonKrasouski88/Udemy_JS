@@ -228,3 +228,8 @@ let text2 = "P6P2P7P4P5CCCCCP3P1";
 let myRegex6 = /C+/; //
 let result15 = text2.match(myRegex6);
 console.log(result15);
+//16 Match Beginning String Patterns
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; 
+let result16 = calRegex.test(rickyAndCal);
+console.log(result16);
