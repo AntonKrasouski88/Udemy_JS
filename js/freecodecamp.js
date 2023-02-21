@@ -233,3 +233,8 @@ let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; 
 let result16 = calRegex.test(rickyAndCal);
 console.log(result16);
+//17 Match Ending string Patterns
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result17 = lastRegex.test(caboose);
+console.log(result17);
