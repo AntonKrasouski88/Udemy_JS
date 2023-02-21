@@ -223,3 +223,8 @@ let text = "<h1>Winter is coming</h1>";
 let myRegex5 = /<h[a-z1-9]*?>/; //
 let result13 = text.match(myRegex5);
 console.log(result13);
+//15 Find One or More Criminals in a Hunt
+let text2 = "P6P2P7P4P5CCCCCP3P1";
+let myRegex6 = /C+/; //
+let result15 = text2.match(myRegex6);
+console.log(result15);
