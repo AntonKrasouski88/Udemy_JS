@@ -218,3 +218,8 @@ let chewieQuote = 'Aaaaaaaaaaaaaaaarrrgh!';
 let chewieRegex = /Aa*/;
 let result12 = chewieQuote.match(chewieRegex);
 console.log(result12);
+//14 Find Characters with Lazy Matching
+let text = "<h1>Winter is coming</h1>";
+let myRegex5 = /<h[a-z1-9]*?>/; //
+let result13 = text.match(myRegex5);
+console.log(result13);
