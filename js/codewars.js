@@ -952,3 +952,10 @@ console.log(findOutlier([1, 2, 3]));
 console.log(findOutlier([2,6,8,10,3]));
 console.log(findOutlier([0,0,3,0,0]));
 console.log(findOutlier([1,1,0,1,1]));
+
+// Task: Revers word
+function reverseWords(str) {
+  return str.split(' ').map(el=>el.split('').reverse().join('')).join(' ');
+}
+
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
