@@ -959,3 +959,18 @@ function reverseWords(str) {
 }
 
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
+
+//Task: Sum a list but ignore any duplicates
+function sumNoDuplicates(numList) {
+ /*  const sum = numList.sort((a,b)=> a - b).filter((el, i , arr) => 
+  el !== arr[i+1] && el !== arr[i-1] ? el: '').reduce((acc,el)=> {return acc +=el}); */
+  const sum = numList.sort((a,b) => a-b).reduce((acc,el,i,arr)=>{
+    if(el !== arr[i+1] && el !== arr[i-1]) {
+      acc +=el;
+    }
+    return acc;
+  }, 0);
+  return sum;
+}
+
+console.log(sumNoDuplicates([5, 6, 10, 3, 10, 10, 6, 7, 0, 9, 1, 1, 6, 3, 1]));
