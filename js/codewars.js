@@ -974,3 +974,14 @@ function sumNoDuplicates(numList) {
 }
 
 console.log(sumNoDuplicates([5, 6, 10, 3, 10, 10, 6, 7, 0, 9, 1, 1, 6, 3, 1]));
+
+//Task: Two to One
+function longest(s1, s2) {
+ /*  let arr = [...s1,...s2].sort().filter((el,i,arr)=>el !== arr[i+1]).join('');
+  return arr; */
+  return [...new Set(s1+s2)].sort().join('')
+}
+
+console.log(longest("aretheyhere", "yestheyarehere"));
+console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
+console.log(longest("inmanylanguages", "theresapairoffunctions"));
