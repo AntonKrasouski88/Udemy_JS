@@ -985,3 +985,7 @@ function longest(s1, s2) {
 console.log(longest("aretheyhere", "yestheyarehere"));
 console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding"));
 console.log(longest("inmanylanguages", "theresapairoffunctions"));
+
+//Task: Be Concise IV - index og an element in an array
+const find = (a,e) => a.indexOf(e) != -1 ? a.indexOf(e):'Not found';
+console.log(find([2,3,5,7,11], 2));
