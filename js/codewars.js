@@ -989,3 +989,7 @@ console.log(longest("inmanylanguages", "theresapairoffunctions"));
 //Task: Be Concise IV - index og an element in an array
 const find = (a,e) => a.indexOf(e) != -1 ? a.indexOf(e):'Not found';
 console.log(find([2,3,5,7,11], 2));
+
+//Task: be concise I - the ternary operator
+const describeAge = (a) => `You're a(n) ${a < 13? "kid": a < 18 ? "teenager" : a < 65 ? "adult" : "elderly"}` ;
+console.log(describeAge(64));
