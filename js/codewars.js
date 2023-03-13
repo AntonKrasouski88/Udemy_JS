@@ -993,3 +993,10 @@ console.log(find([2,3,5,7,11], 2));
 //Task: be concise I - the ternary operator
 const describeAge = (a) => `You're a(n) ${a < 13? "kid": a < 18 ? "teenager" : a < 65 ? "adult" : "elderly"}` ;
 console.log(describeAge(64));
+
+//Task: Friend or Foe?
+const friend = (friends) => {
+  return friends.filter(el=>el.length === 4);
+}
+
+console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]));
