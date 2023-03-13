@@ -1000,3 +1000,19 @@ const friend = (friends) => {
 }
 
 console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]));
+
+//Task: Find the next perfect square!
+//const findNextSquare = (sq) => Number.isInteger(Math.sqrt(sq)) ? Math.pow(Math.sqrt(sq)+1,2): -1
+const findNextSquare = (sq) => Number.isInteger(Math.sqrt(sq)) ? (Math.sqrt(sq)+1)**2: -1;
+/* function findNextSquare (sq) {
+  if(!Number.isInteger(Math.sqrt(sq))) {
+    return -1
+  } else {
+    return Math.pow((Math.sqrt(sq) + 1),2)
+  }
+  
+}
+ */
+console.log(findNextSquare(319225));
+console.log(findNextSquare(155));
+console.log(findNextSquare(15241383936));
