@@ -1,15 +1,15 @@
 
-function my_function(n) {
+function myFunction(n) {
     if(n === 1) {
-      return n 
+      return n; 
     }
-    return `${my_function(n-1)} ${n}`
+    return `${myFunction(n-1)} ${n}`;
   }
   
-  console.log(my_function(9));
+  console.log(myFunction(9));
   
   function factorial(x) {        //Объявление функции
-    if (x <= 1) return 1;        //Проверка условия окончания расчета
+    if (x <= 1) {return 1;}        //Проверка условия окончания расчета
     return x * factorial(x-1);   //Вызов этой же функции с уменьшенным на 1 аргументом
   }
   
@@ -44,5 +44,33 @@ function testStr1(a, b) {
 
 console.log(testStr1('Hello', 'World!'));
 
+function testStr(a, b) {
+  return a.indexOf(b);
+}
 
+console.log(testStr('This is a test string for testing', 'tehjst'));
 
+function testArray(a, b) {
+  let arr = [...a,...b];
+  let result = 0;
+  for (let i = 0; i < arr.length; i++){
+      result += arr[i];
+    }
+  return result;
+}
+
+console.log(testArray([0, 1, 5, 3], [3]));
+
+function testArray(a, b) {
+  let arr = (a+b).split('');
+  arr.unshift('Иванов');
+  let str = arr.reverse().join('');
+  return str;// Тут нужно написать решение
+}
+
+console.log(testArray('4326', '297515'));
+
+var myDate = new Date();               // Создаем объект типа Date, в нем оказывается текущая дата
+myDate.setFullYear(2017, 4, 22);       // Присваиваем ему значение даты - 22 мая 2017
+myDate.setDate(myDate.getDate() + 10); // Устанавливаем новое значение даты, получив прежнее и прибавив 10.
+console.log(myDate);
