@@ -74,3 +74,18 @@ var myDate = new Date();               // Создаем объект типа D
 myDate.setFullYear(2017, 4, 22);       // Присваиваем ему значение даты - 22 мая 2017
 myDate.setDate(myDate.getDate() + 10); // Устанавливаем новое значение даты, получив прежнее и прибавив 10.
 console.log(myDate);
+
+function testDateTime(a, b) {
+  let date_1 = new Date(a);
+  let date_2 = new Date(b);
+  let arr = [ 'Воскресенье','Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  if (date_1 > date_2) {
+    return arr[date_1.getDay()];
+  } else {
+    return arr[date_2.getDay()];
+  }
+
+}
+
+console.log(testDateTime('19 October 1909 10:27', '28 March 1909 00:59'));
+console.log(testDateTime('04 August 1909 00:24', '03 November 1909 06:54'));
