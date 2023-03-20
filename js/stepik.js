@@ -89,3 +89,21 @@ function testDateTime(a, b) {
 
 console.log(testDateTime('19 October 1909 10:27', '28 March 1909 00:59'));
 console.log(testDateTime('04 August 1909 00:24', '03 November 1909 06:54'));
+
+function testMath(a) {
+  return Math.sin(Math.PI*a/180);
+}
+
+console.log(testMath(348));
+
+function testMath(a, b, c) {
+  return 1/2*a*b*Math.sin(Math.PI*c/180);
+}
+
+console.log(testMath(2, 10, 16));
+
+function testMath(a, b, c, d) {
+  return Math.floor(Math.max(a,b,c,d)/Math.min(a,b,c,d));
+}
+
+console.log(testMath(1,4,8,8));
