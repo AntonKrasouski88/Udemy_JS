@@ -1016,3 +1016,14 @@ const findNextSquare = (sq) => Number.isInteger(Math.sqrt(sq)) ? (Math.sqrt(sq)+
 console.log(findNextSquare(319225));
 console.log(findNextSquare(155));
 console.log(findNextSquare(15241383936));
+
+//Task: Count of positives / sum of negatives
+function countPositivesSumNegatives(input) {
+  if (input.indexOf(null) === 0) {
+    return []
+  }
+  let arr = [input.filter(p=> p > 0).length, input.reduce((accum, el)=> {return el < 0 ? accum +=el : accum += 0},0)]
+  return (arr);
+}
+
+console.log(countPositivesSumNegatives([]));
