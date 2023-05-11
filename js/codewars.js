@@ -1027,3 +1027,10 @@ function countPositivesSumNegatives(input) {
 }
 
 console.log(countPositivesSumNegatives([]));
+
+//Task: Find the Integral
+function integrate(coefficient, exponent) {
+  return `${coefficient/(exponent+1)}x^${exponent+1}`
+}
+
+console.log(integrate(3,2));
