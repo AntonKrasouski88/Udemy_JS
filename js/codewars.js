@@ -1070,3 +1070,25 @@ function printerError (s) {
 
 console.log(printerError("aaabbbbhaijjjm"));
 console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+
+//Task: Regex validate PIN code
+function validatePINMy (pin) {
+  let a = pin.match(/[0-9]/gi);
+  return a!= null && a.length === pin.length && (pin.length == 6  || pin.length == 4)
+}
+
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+
+console.log(validatePIN("1234"));
+console.log(validatePIN("12345"));
+console.log(validatePIN("a234"));
+console.log(validatePIN("23s4"));
+console.log(validatePIN("-1.234"));
+console.log(validatePIN("1234"));
+console.log(validatePIN("0000"));
+console.log(validatePIN("1111"));
+console.log(validatePIN("123456"));
+console.log(validatePIN("098765"));
+console.log(validatePIN("000000"));
