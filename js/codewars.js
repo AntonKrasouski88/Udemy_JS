@@ -1035,17 +1035,18 @@ function integrate(coefficient, exponent) {
 
 console.log(integrate(3,2));
 
+
 //Task: Running out of space
 function space (arr) {
-/*   let b = [];
-  arr.reduce((acc, el, i)=> {
-    acc += el
-    b[i] = acc
-    return acc
-  },'')
-  return b */
-  let string = ''
-	return arr.map( (e) => string += e )
-}
-
-console.log(space(['kevin', 'has','no','space']));
+  /*   let b = [];
+    arr.reduce((acc, el, i)=> {
+      acc += el
+      b[i] = acc
+      return acc
+    },'')
+    return b */
+    let string = '';
+    return arr.map( (e) => string += e );
+  }
+  
+  console.log(space(['kevin', 'has','no','space']));
