@@ -1035,18 +1035,60 @@ function integrate(coefficient, exponent) {
 
 console.log(integrate(3,2));
 
+//Task: Categorize New Member
+function openOrSenior(data){
+  //return data.map(el=>el[0] >= 55 && el[1] > 7 ? 'Senior' : 'Open');
+  return data.map(([age,handicap]) => age > 54 && handicap > 7 ? "Senior": "Open")
+}
+
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]]));
+console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]));
+console.log(openOrSenior([[43,14],[55,7],[84,21],[37,14],[48,24],[86,19],[36,1]]));
+
+//Task: Printer Error
+function printerError (s) {
+  const color = /[n-z]/gi;
+  const str = s.match(color);
+  return `${str === null ? 0: str.length}/${s.length}`
+}
+
+console.log(printerError("aaabbbbhaijjjm"));
+console.log(printerError("aaaxbbbbyyhwawiwjjjwwm"));
+
+//Task: Regex validate PIN code
+function validatePINMy (pin) {
+  let a = pin.match(/[0-9]/gi);
+  return a!= null && a.length === pin.length && (pin.length == 6  || pin.length == 4)
+}
+
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+
+console.log(validatePIN("1234"));
+console.log(validatePIN("12345"));
+console.log(validatePIN("a234"));
+console.log(validatePIN("23s4"));
+console.log(validatePIN("-1.234"));
+console.log(validatePIN("1234"));
+console.log(validatePIN("0000"));
+console.log(validatePIN("1111"));
+console.log(validatePIN("123456"));
+console.log(validatePIN("098765"));
+console.log(validatePIN("000000"));
 
 //Task: Running out of space
 function space (arr) {
-  /*   let b = [];
-    arr.reduce((acc, el, i)=> {
-      acc += el
-      b[i] = acc
-      return acc
-    },'')
-    return b */
-    let string = '';
-    return arr.map( (e) => string += e );
-  }
-  
-  console.log(space(['kevin', 'has','no','space']));
+/*   let b = [];
+  arr.reduce((acc, el, i)=> {
+    acc += el
+    b[i] = acc
+    return acc
+  },'')
+  return b */
+  let string = '';
+	return arr.map( (e) => string += e );
+}
+
+console.log(space(['kevin', 'has','no','space']));
