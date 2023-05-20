@@ -1049,3 +1049,14 @@ function space (arr) {
 }
 
 console.log(space(['kevin', 'has','no','space']));
+
+//Task: Categorize New Member
+function openOrSenior(data){
+  //return data.map(el=>el[0] >= 55 && el[1] > 7 ? 'Senior' : 'Open');
+  return data.map(([age,handicap]) => age > 54 && handicap > 7 ? "Senior": "Open")
+}
+
+console.log(openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]]));
+console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]]));
+console.log(openOrSenior([[59, 12],[55,-1],[12, -2],[12, 12]]));
+console.log(openOrSenior([[43,14],[55,7],[84,21],[37,14],[48,24],[86,19],[36,1]]));
