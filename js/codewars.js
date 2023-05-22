@@ -1157,3 +1157,27 @@ function drawnCards (arr) {
 }; */
 
 console.log(drawnCards(["KC", "KH", "QC", "KS", "KD", "QH", "QD", "QS"]));
+
+//Task: Length and two values
+function alternate (n, firstValue, secondValue) {
+  const arr = [];
+  while (arr.length < n) {
+    if(arr.length < n) {
+      if(arr.length%2 === 0) {
+        arr.push(firstValue);
+      } else {
+        arr.push(secondValue);
+      }
+    }
+  }
+  return arr;
+}
+/* function alternate(n, firstValue, secondValue){
+  const array = [];
+  for (let i = 0; i < n; i++) {
+    array.push(i % 2 === 0 ? firstValue : secondValue)
+  }
+  return array;
+} */
+
+console.log(alternate(5, true, false));
