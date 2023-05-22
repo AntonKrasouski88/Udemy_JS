@@ -1092,3 +1092,68 @@ function space (arr) {
 }
 
 console.log(space(['kevin', 'has','no','space']));
+
+
+    // Javascript program to print Latin Square
+     
+    // Function to print n x n
+    // Latin Square
+    function printLatin(n)
+    {
+           
+        // A variable to control the
+        // rotation point.
+        let k = n + 1;
+       
+        // Loop to print rows
+        for (let i = 1; i <= n; i++)
+        {
+   
+            // This loops runs only after
+            // first iteration of outer
+            // loop. It prints numbers
+            // from n to k
+            let temp = k;
+   
+            while (temp <= n)
+            {
+                console.log(temp + " ");
+                temp++;
+            }
+       
+            // This loop prints numbers from
+            // 1 to k-1.
+            for (let j = 1; j < k; j++)
+                console.log(j + " ");
+       
+            k--;
+            console.log("</br>");
+        }
+    }
+     
+    let n = 5;
+           
+    // Invoking printLatin function
+    printLatin(n);
+
+
+//Task: Playing Cards Draw Order – Part 1
+function drawnCards (arr) {
+  let arrCopy = []
+  let l = arr.length;
+  for (let i = 0; i < l; i++) {
+    arrCopy.push(arr.shift());
+    arr.push(arr.shift());
+  }
+  return arrCopy;
+}
+/* const draw = deck => {  
+	const drawnCards = [];
+  
+  while (deck.length)
+    drawnCards.push(deck.shift()) && deck.length && deck.push(deck.shift());
+
+	return drawnCards;
+}; */
+
+console.log(drawnCards(["KC", "KH", "QC", "KS", "KD", "QH", "QD", "QS"]));
