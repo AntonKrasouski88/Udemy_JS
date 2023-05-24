@@ -1181,3 +1181,10 @@ function alternate (n, firstValue, secondValue) {
 } */
 
 console.log(alternate(5, true, false));
+
+//Task: ES6 string addition
+function joinStrings (string1, string2) {
+  return `${string1} ${string2}`
+}
+
+console.log(joinStrings('string1', 'string2'));
