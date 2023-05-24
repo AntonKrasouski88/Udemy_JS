@@ -1188,3 +1188,23 @@ function joinStrings (string1, string2) {
 }
 
 console.log(joinStrings('string1', 'string2'));
+
+//Task: total amount of points
+function points (games) {
+  let a = games.reduce((acc, el) => {
+    if(+el.substr(0,1) > +el.substr(2,1)) {
+      acc += 3;
+    } else if (+el.substr(0,1) === +el.substr(2,1)) {
+      acc += 1;
+    }
+
+    return acc;
+  }, 0)
+  return a;
+}
+
+/* const points=games=>games.reduce((output,current)=>{
+  return output += current[0]>current[2] ? 3 : current[0]===current[2] ? 1 : 0;
+},0) */
+
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
