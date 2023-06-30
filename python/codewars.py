@@ -40,3 +40,19 @@ def people_with_age_drink(age):
     
 
 print(people_with_age_drink(13))
+
+#Task: Quadratic equation
+import math
+def quadraticEducation (a, b, c):
+    d = b**2 - 4*a*c
+    print(d)
+    if d > 0:
+        return((-b - math.sqrt(d))/(2*a), (-b + math.sqrt(d))/(2*a))
+    elif d == 0:
+        return(-b/2*a)
+    elif d < 0:
+        return('Нет корней')
+
+
+print(quadraticEducation(-5.64671390542564, 7.90460919676605, -2.10960556210672))
+print(quadraticEducation(-7.10198466858238, 1.68832342688049, 9.61165416968306))
