@@ -56,3 +56,12 @@ def quadraticEducation (a, b, c):
 
 print(quadraticEducation(-5.64671390542564, 7.90460919676605, -2.10960556210672))
 print(quadraticEducation(-7.10198466858238, 1.68832342688049, 9.61165416968306))
+
+#Task: Subsequence of numbers
+def subsequence (m, n):
+    for i in range(m, n-1, -1):
+        if i%2 !=0:
+            print(i)
+
+
+subsequence(77,62)
