@@ -1,3 +1,4 @@
+import math
 # Task: Even or Odd
 def even_or_odd(number):
     if number % 2 == 0:
@@ -42,7 +43,6 @@ def people_with_age_drink(age):
 print(people_with_age_drink(13))
 
 #Task: Quadratic equation
-import math
 def quadraticEducation (a, b, c):
     d = b**2 - 4*a*c
     print(d)
@@ -100,3 +100,16 @@ def amountOfNumbers (a, b):
 
 
 print(amountOfNumbers(1,10))
+
+
+#Task: Asymptotic approximation
+def asymptoticApproximation (n):
+    import math
+    total = 1
+    for i in range(2, n+1):
+        total += 1/i
+    total -= math.log(n)
+    return total
+
+
+print(asymptoticApproximation(10))
