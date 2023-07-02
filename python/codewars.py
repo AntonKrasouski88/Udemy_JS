@@ -88,3 +88,15 @@ def multiplicationTable (n):
 
 
 multiplicationTable(5)
+
+
+#Task: amount of numbers
+def amountOfNumbers (a, b):
+    count = 0
+    for i in range(a, b+1):
+        if i**3%10 == 4 or i**3%10 == 9:
+            count += 1
+    return count
+
+
+print(amountOfNumbers(1,10))
