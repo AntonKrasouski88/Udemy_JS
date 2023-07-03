@@ -161,3 +161,20 @@ def alternatingSum (n):
 
 
 print(alternatingSum(9999))
+
+#Task: Fibonacci sequence
+def fibonacciSequence (n):
+    a = 0
+    b = 0
+    s = ''
+    for i in range(n):
+        if a == 0:
+            a = 1
+        else: 
+            a = a + b
+            b = a - b
+        s = s + ' ' + str(a)    
+    return s
+
+
+print(fibonacciSequence(22))
