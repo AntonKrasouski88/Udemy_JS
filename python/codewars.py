@@ -148,3 +148,16 @@ def sumOfDivisors (n):
 
 
 print(sumOfDivisors(100))
+
+#Task: Alternating sum
+def alternatingSum (n):
+    total = 1
+    for i in range (2, n+1):
+        if i%2 == 0:
+            total -= i
+        else:
+            total += i
+    return total
+
+
+print(alternatingSum(9999))
