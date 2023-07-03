@@ -134,4 +134,17 @@ def factorialNumber (n):
         total *=i
     return total
 
+
 print(factorialNumber(12))
+
+
+#Task: sum of divisors
+def sumOfDivisors (n):
+    total = 1
+    for i in range (2, n+1):
+        if n%i == 0:
+            total += i
+    return total
+
+
+print(sumOfDivisors(100))
