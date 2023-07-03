@@ -125,3 +125,13 @@ def amountOfNumbers2 (n):
 
 
 print(amountOfNumbers2(10))
+
+
+#Task: Factorial of a number
+def factorialNumber (n):
+    total = 1
+    for i in range(2, n+1):
+        total *=i
+    return total
+
+print(factorialNumber(12))
