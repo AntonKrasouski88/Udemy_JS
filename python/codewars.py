@@ -178,3 +178,24 @@ def fibonacciSequence (n):
 
 
 print(fibonacciSequence(22))
+
+
+#Task: Pay the witcher with minted coin
+def payWitcher (n):
+    total = 0
+    while n >= 25:
+        total += 1
+        n -=25
+    while n >= 10:
+        total += 1
+        n -=10
+    while n >= 5:
+        total += 1
+        n -=5
+    while n >= 1:
+        total += 1
+        n -= 1
+    return total
+
+
+print(payWitcher(499))
