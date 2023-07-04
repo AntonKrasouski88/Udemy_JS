@@ -199,3 +199,25 @@ def payWitcher (n):
 
 
 print(payWitcher(499))
+
+
+
+#Task: max and min
+def maxMin (n):
+    max_digit = 0
+    min_digit = 9
+    
+    while n > 0:
+        cur_digit = n % 10
+    
+        max_digit = max(max_digit, cur_digit)
+        min_digit = min(min_digit, cur_digit)
+    
+        n //= 10
+    
+    print("Максимальная цифра равна", max_digit)
+    print("Минимальная цифра равна", min_digit)
+
+
+
+maxMin(26670)
