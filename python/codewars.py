@@ -250,3 +250,21 @@ def numerical_triangel3 (n):
 
 
 numerical_triangel3(3)
+
+
+#Task: Numerical triangel 4
+def numerical_triangel4 (n):   
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):    
+            print(j, end ='')
+        for k in range(i - 1, 0, -1):
+            print(k, end='')
+        print()
+
+#for i in range(1, n + 1):
+    #for j in range(1, 2 * i):
+        #print(min(j, 2 * i - j), end='')
+    #print()
+
+
+numerical_triangel4(5)
