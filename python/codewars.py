@@ -238,3 +238,15 @@ def prove_the_hypothesis ():
                         exit()
 
 prove_the_hypothesis()
+
+#Task: Numerical triangel 3
+def numerical_triangel3 (n):
+    a = 1
+    for i in range(1, n + 1):
+        for k in range(i):
+            print(a, end = '')
+            a += 1
+        print()
+
+
+numerical_triangel3(3)
