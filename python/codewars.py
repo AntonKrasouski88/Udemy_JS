@@ -268,3 +268,26 @@ def numerical_triangel4 (n):
 
 
 numerical_triangel4(5)
+
+
+#Task: Sum of Multiples
+def sum_mul(n,m):
+    sum = 0
+    if m <= 0 or n <= 0:
+        return 'INVALID'
+    elif n > m:
+        return 0
+    for i in range(n,m):
+        if i%n == 0:
+            sum += i
+    return sum
+
+
+#def sum_mul(n, m):
+#    if m>0 and n>0:
+#        return sum(range(n, m, n))
+#    else:
+#        return 'INVALID'
+
+
+print(sum_mul(0, 2))
