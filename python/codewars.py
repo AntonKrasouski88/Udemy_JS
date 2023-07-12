@@ -291,3 +291,23 @@ def sum_mul(n,m):
 
 
 print(sum_mul(0, 2))
+
+
+#Task: vowels and consonants
+def find_letters(s):
+    count_v = 0
+    count_c = 0
+    v = 'ауоыиэяюёеАУОЫИЭЯЮЁЕ'
+    c = 'бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ'
+
+    for i in s:
+        if i in v:
+            count_v += 1
+        if i in c:
+            count_c += 1
+
+    print('Количество гласных букв равно ' + str(count_v))
+    print('Количество согласных букв равно ' + str(count_c))
+
+
+find_letters("Вдохновение – это умение приводить себя в рабочее состояние!")
