@@ -311,3 +311,17 @@ def find_letters(s):
 
 
 find_letters("Вдохновение – это умение приводить себя в рабочее состояние!")
+
+
+#Task: two_parts
+def two_parts(s):
+    import math
+    l = math.ceil(len(s)/2)
+    
+    first_part = s[:l]
+    second_part = s[l:]
+
+    print(second_part, first_part, sep='')
+
+
+two_parts('abcdefg')
