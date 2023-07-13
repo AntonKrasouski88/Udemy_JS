@@ -325,3 +325,29 @@ def two_parts(s):
 
 
 two_parts('abcdefg')
+
+
+#Task: Check latters
+def check_latters(s):
+#    letters = 'ZYXWVUTSRQPONMLKJIHGFEDCBA'
+#    total = 0
+#    flag = 'NO'
+
+#    for i in s:
+#        for j in letters:
+#            if i == j:
+#                total += 1
+#   if total == 2:
+#       flag = 'YES'
+#    print(flag)
+
+
+    s = input()
+
+    if s == s.title():
+        print("YES")
+    else:
+        print("NO")
+
+check_latters('chris alan')
+check_latters('Chris Alan')
