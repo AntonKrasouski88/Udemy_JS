@@ -375,3 +375,14 @@ def good_shade(s):
 
 good_shade('оыралоывало ХОРОШвмсва выарво83кг834')
 
+
+#Task: Find upprcase letters
+def find_uppercase_letters(s):
+    count = 0
+    for c in s:
+        if c != c.upper():
+            count += 1
+    print(count)
+
+
+find_uppercase_letters('2376423745dhdhdPPPP')
