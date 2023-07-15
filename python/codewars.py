@@ -1,3 +1,4 @@
+# -*- condig: utf-8 -*-
 import math
 # Task: Even or Odd
 def even_or_odd(number):
@@ -351,3 +352,26 @@ def check_latters(s):
 
 check_latters('chris alan')
 check_latters('Chris Alan')
+
+
+#Task: good shade
+def good_shade(s):
+#    shade = 'хорош'
+#    s_copy = s.lower()
+#    l = len(s)
+#    flag = 'NO'
+#    for i in range(l):
+#        if s_copy[i] == 'х':
+#            if s_copy[i:i+5] == shade:
+#                flag = 'YES'
+#                break
+#   print(flag)
+
+    if "хорош" in s.lower():
+        print("YES")
+    else:
+        print("NO")
+
+
+good_shade('оыралоывало ХОРОШвмсва выарво83кг834')
+

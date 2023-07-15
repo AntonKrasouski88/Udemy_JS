@@ -107,3 +107,5 @@ function testMath(a, b, c, d) {
 }
 
 console.log(testMath(1,4,8,8));
+
+console.log('Привет')
