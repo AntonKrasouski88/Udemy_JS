@@ -109,3 +109,70 @@ function testMath(a, b, c, d) {
 console.log(testMath(1,4,8,8));
 
 console.log('Привет')
+
+let y = 10;
+
+y < 5 || console.log("Это будет напечатано");             // Это будет напечатано
+
+y < 15 || console.log("Это никогда не будет напечатано")
+
+let score, level = 1;
+
+
+console.log(undefined + 200);
+
+if (score >= 100) {
+  level = 2;
+} else {
+  level = 1;
+}
+
+console.log("Уровень: " + level);
+
+
+let status = "3";
+
+console.log(3 === '3')
+
+let input = 1;
+let output = '> ';
+
+switch (input) {
+  case 0:
+    output += '> ';
+  case 1:
+    output += 'Как ';
+    output += 'вас ';
+  case 2:
+    output += 'зовут';
+  case 3:
+    output += '?';
+  case 4:
+    console.log(output);
+    break;
+  case 5:
+    output += '!';
+    console.log(output);
+    break;
+  default:
+    console.log('Пожалуйста, введите свое имя.');
+}
+
+// > Как вас зовут?
+
+let fruit = "яблоко";
+let message = "Я люблю ";
+
+switch (fruit) {
+  case "банан":
+  case "яблоко":
+    message += "есть ";
+  case "апельсин":
+    message += "сочный ";
+  case "виноград":
+    message += "фрукт.";
+    console.log(message);
+    break;
+  default:
+    console.log("Я не люблю этот фрукт.");
+}
