@@ -386,3 +386,12 @@ def find_uppercase_letters(s):
 
 
 find_uppercase_letters('2376423745dhdhdPPPP')
+
+
+#Task: Volume of a Cuboid
+
+def get_volume_of_cuboid (length, width, height):
+    return length * width * height
+
+
+print (get_volume_of_cuboid(1, 2, 2))
