@@ -389,9 +389,23 @@ find_uppercase_letters('2376423745dhdhdPPPP')
 
 
 #Task: Volume of a Cuboid
-
 def get_volume_of_cuboid (length, width, height):
     return length * width * height
 
 
 print (get_volume_of_cuboid(1, 2, 2))
+
+
+#Task: the most common symbol
+def most_common_symbol(s):
+    total = 0
+    char = ''
+    for c in s:
+        count = s.count(c)
+        if count >= total:
+            total = count
+            char = c
+    print(char)
+
+
+most_common_symbol('jfnmdbsdfnsjfqenfdssjdfhsdjlkppppppppppppppppppgggggxxzzzssswwwwwwwwwwwwwwwwwwfgdfxdfg')
