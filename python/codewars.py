@@ -409,3 +409,14 @@ def most_common_symbol(s):
 
 
 most_common_symbol('jfnmdbsdfnsjfqenfdssjdfhsdjlkppppppppppppppppppgggggxxzzzssswwwwwwwwwwwwwwwwwwfgdfxdfg')
+
+#Task: get days
+def get_days(month):
+    if month == 2:
+        return 28
+    elif month == 4 or month == 6 or month == 9 or month == 11:
+        return 30
+    else:
+        return 31
+
+print(get_days(1))
