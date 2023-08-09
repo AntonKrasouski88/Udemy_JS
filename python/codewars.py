@@ -420,3 +420,15 @@ def get_days(month):
         return 31
 
 print(get_days(1))
+
+#Task: merge list
+def merge_lists(lt):
+    list_sort = [int(j) for el in lt for j in el]
+    list_sort.sort()
+    list_sort = [str(el) for el in list_sort]
+    return ' '.join(list_sort)
+    
+    
+n = int(input())
+arr = [input().split() for i in range(n)]
+print(merge_lists(arr))
