@@ -1208,3 +1208,15 @@ function points (games) {
 },0) */
 
 console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]));
+
+//Task: Pillars
+function pillars(numPill, dist, width) {
+  if(numPill <= 1) {
+    return 0
+  }
+  return (dist*100*(numPill - 1)) + (numPill - 2)*width
+}
+
+console.log(pillars(1, 10, 10));
+console.log(pillars(2, 20, 25));
+console.log(pillars(11, 15, 30));
