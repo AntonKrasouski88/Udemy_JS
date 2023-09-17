@@ -1255,3 +1255,14 @@ function getPlanetName(id){
 }
 
 console.log(getPlanetName(5));
+
+//Task: Grasshoper - if/else syntax debag
+function checkAlive (health) {
+  if (health <= 0) {
+    return false
+  } else {
+    return true
+  }
+}
+console.log(checkAlive(5));
+console.log(checkAlive(0));
