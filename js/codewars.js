@@ -1279,3 +1279,24 @@ function firstNonConsecutive (arr) {
 
 console.log(firstNonConsecutive([1,2,3,4,6,7,8]));
 console.log(firstNonConsecutive([1,2,3,4]));
+
+//Task: Return Two Highest Values in List
+function twoHighest(arr) {
+  let arrCopy = Array.from(new Set(arr)).sort((a,b) => a - b)
+  if(arrCopy.length === 1 || arrCopy.length === 0) {
+    return arrCopy
+  }
+  console.log(arrCopy);
+  const max1 = arrCopy[arrCopy.length -  1]
+  const max2 = arrCopy[arrCopy.length -  2]
+  if(max1 === max2) {
+    return [max1]
+  } else {
+    return [max1, max2]
+  }
+
+
+}
+
+console.log(twoHighest([15, 20, 20, 17]));
+console.log(twoHighest([76931,8173,13800,26262,19640,64738,18147,8663,10192,31377,83567,9575,30270,89957,56305,30548,47081,42373]))
