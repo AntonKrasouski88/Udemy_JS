@@ -1306,3 +1306,12 @@ const solve = (x, y) => x/y
 
 console.log(solve(2, 4));
 console.log(solve(42, 0));
+
+//Task: get ascii vaslue of charater
+function getASCII(c) {
+  return c.charCodeAt(0)
+}
+
+console.log(getASCII('A'));
+console.log(getASCII(' '));
+console.log(getASCII('!'));
