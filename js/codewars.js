@@ -1300,3 +1300,9 @@ function twoHighest(arr) {
 
 console.log(twoHighest([15, 20, 20, 17]));
 console.log(twoHighest([76931,8173,13800,26262,19640,64738,18147,8663,10192,31377,83567,9575,30270,89957,56305,30548,47081,42373]))
+
+//Task: Incorrect division method
+const solve = (x, y) => x/y
+
+console.log(solve(2, 4));
+console.log(solve(42, 0));
