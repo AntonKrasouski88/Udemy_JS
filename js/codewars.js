@@ -1315,3 +1315,14 @@ function getASCII(c) {
 console.log(getASCII('A'));
 console.log(getASCII(' '));
 console.log(getASCII('!'));
+
+//Task: Double Chair
+function doubleChar(str) {
+  let doubleStr = ''
+  for(let i = 0; i < str.length; i++){
+    doubleStr += str.charAt(i).repeat(2) 
+  }
+  return doubleStr
+}
+
+console.log(doubleChar("Adidas"));
