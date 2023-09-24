@@ -1335,3 +1335,28 @@ function mango(quantity, price) {
 console.log(mango(3, 3))
 console.log(mango(9, 5))
 console.log(mango(16, 40))
+
+
+//Task: reverse the bits in an integer
+function reberseBits(n) {
+  let bit = ''
+  while(n !== 0){
+    bit += n - (Math.floor(n/2))*2
+    n = (Math.floor(n/2))
+  }
+  arr = bit.split('')
+  l = arr.length - 1
+  num = 0
+  for(let i = 0; i < arr.length; i++) {
+    num += +arr[i]*2**l
+    l -= 1
+  }
+  return num
+}
+
+function reverseBits(n) {
+  const binaryReverse = n.toString(2).split('').reverse().join('')
+  return parseInt(binaryReverse, 2)
+}
+
+console.log(reberseBits(417));
