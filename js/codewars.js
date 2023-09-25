@@ -1360,3 +1360,11 @@ function reverseBits(n) {
 }
 
 console.log(reberseBits(417));
+
+//Task: Complementary DNA
+function DNAStrand(dna){
+  let dnaCopy = dna.split('').map(item => item === 'A' ? 'T' : item === 'T' ? 'A' : item === 'C' ? 'G' : item === 'G' ? 'C' : item)
+  return dnaCopy.join('')
+}
+
+console.log(DNAStrand("ATTGC"));
