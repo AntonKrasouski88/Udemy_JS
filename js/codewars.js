@@ -1368,3 +1368,13 @@ function DNAStrand(dna){
 }
 
 console.log(DNAStrand("ATTGC"));
+
+//Task: Counting dublicates
+function duplicateCount(text) {
+  arr = text.toLowerCase().split('').sort().filter((item, i, arr) => item === arr[i + 1])
+  set = new Set(arr)
+  return set.size
+  //return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
+
+console.log(duplicateCount("Indivisibility"));
