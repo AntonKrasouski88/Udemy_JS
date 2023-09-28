@@ -1378,3 +1378,13 @@ function duplicateCount(text) {
 }
 
 console.log(duplicateCount("Indivisibility"));
+
+//Task: String ends with?
+function solution(str, ending) {
+  return str.substr(-ending.length) === ending || ending === ''
+  //return str.endsWith(ending)
+}
+
+console.log(solution('abcde', 'cde'));
+console.log(solution('abcde', 'abc'));
+console.log(solution('abc', ''));
