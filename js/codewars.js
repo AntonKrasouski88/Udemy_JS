@@ -1388,3 +1388,40 @@ function solution(str, ending) {
 console.log(solution('abcde', 'cde'));
 console.log(solution('abcde', 'abc'));
 console.log(solution('abc', ''));
+
+//Task: Dublicate Encoder
+function dublicateEncoder(word) {
+  str = '';
+  count = 0;
+  arr = word.toLowerCase().split('');
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr.length; j++) {
+      if(arr[i] === arr[j]) {
+        count += 1; 
+      }
+    }
+    if(count > 1){
+      str += ')';
+    } else{
+      str += '(';
+    }
+    count = 0;
+  }
+  return str;
+}
+
+/* function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+} */
+
+
+console.log(dublicateEncoder("din"));
+console.log(dublicateEncoder("recede"));
+console.log(dublicateEncoder("Success"));
+console.log(dublicateEncoder("(( @"));
