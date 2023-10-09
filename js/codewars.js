@@ -1605,3 +1605,24 @@ console.log(cubeOdd([1, 2, 3, 4]));
 console.log(cubeOdd([-3,-2,2,3]));
 console.log(cubeOdd(["a",12,9,"z",42]));
 console.log(cubeOdd([5,12,9,NaN,9]));
+
+//Task: Convert string to camel case
+function toCamelCase(str){
+  arr = str.split('').filter((item, i, arr) => {
+    if(item == '-' || item == '_') {
+      arr[i + 1] = arr[i + 1].toUpperCase()
+      return item = ''
+    } 
+    return item
+  })
+  return arr.join('')
+}
+
+/* function toCamelCase(str){
+  var regExp=/[-_]\w/ig;
+  return str.replace(regExp,function(match){
+        return match.charAt(1).toUpperCase();
+   });
+} */
+
+console.log(toCamelCase("the_stealth_warrior"));
