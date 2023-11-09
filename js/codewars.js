@@ -1626,3 +1626,13 @@ function toCamelCase(str){
 } */
 
 console.log(toCamelCase("the_stealth_warrior"));
+
+//Task: is this a triangle?
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && b + c > a
+}
+
+console.log(isTriangle(7, 2, 2));
+console.log(isTriangle(1, 2, 2));
+
+console.log(3+2)
