@@ -1635,4 +1635,9 @@ function isTriangle(a, b, c) {
 console.log(isTriangle(7, 2, 2));
 console.log(isTriangle(1, 2, 2));
 
-console.log(3+2)
+//Task: Ones and Zeros
+function binaryArrayToNumber (arr) {
+  return parseInt(arr.join(''), 2)
+}
+
+console.log(binaryArrayToNumber([1,1,1,1]));
