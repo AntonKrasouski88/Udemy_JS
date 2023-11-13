@@ -1641,3 +1641,16 @@ function binaryArrayToNumber (arr) {
 }
 
 console.log(binaryArrayToNumber([1,1,1,1]));
+
+//Task stepik: The number of tags
+function count_tags(tags) {
+  let result;
+  result = [...new Set(tags)].map(el => {
+    let i = 0;
+    tags.forEach(item => item === el ? i++ : i)
+    return `${el}: ${i}`
+  })
+  return result.join(', ')
+}
+
+console.log(count_tags(["javascript", "php", "javascript", "sql", "java", "python", "sql"]));
