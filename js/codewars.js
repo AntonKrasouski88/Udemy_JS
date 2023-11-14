@@ -1654,3 +1654,18 @@ function count_tags(tags) {
 }
 
 console.log(count_tags(["javascript", "php", "javascript", "sql", "java", "python", "sql"]));
+
+//Task stepik: Starship
+let infStarships = [{"uss_enterprise":{"name":"USS Enterprise","shields":false,"weapons":true,"engine_power":90},"millennium_falcon":{"name":"Millennium Falcon","shields":true,"weapons":true,"engine_power":100},"prometheus":{"name":"Prometheus","shields":false,"weapons":true,"engine_power":70},"dragonfly":{"name":"Dragonfly","shields":true,"weapons":true,"engine_power":70},"ikar":{"name":"Ikar","shields":false,"weapons":true,"engine_power":70},"dedalus":{"name":"Dedalus","shields":true,"weapons":true,"engine_power":70}}]
+
+function findActShields(arr) {
+    let result = []
+    for (let key in arr[0]) {
+      if(arr[0][key]['shields']) {
+        result.push(arr[0][key]['name'])
+      }
+    }
+    return result.join(', ')
+}
+
+console.log(findActShields(infStarships));
