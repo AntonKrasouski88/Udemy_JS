@@ -1669,3 +1669,23 @@ function findActShields(arr) {
 }
 
 console.log(findActShields(infStarships));
+
+
+//Task stepik: Count arrays
+function countArray(arr) {
+  let result = 0;
+  let flag = true;
+  while (flag) {
+    flag = false;
+    arr.forEach(el => {
+      if(Array.isArray(el)) {
+        result++
+        flag = true
+      }
+    })
+    arr = arr.flat()
+  }
+  return result
+}
+
+console.log(countArray([1, [2, 3], 3, [4, [5]]]));
