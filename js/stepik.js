@@ -176,3 +176,15 @@ switch (fruit) {
   default:
     console.log("Я не люблю этот фрукт.");
 }
+
+//Task stepik: edit a line in an array
+function editorStrArr (str) {
+  let arr = []
+  for (let i = 0; i < str.length; i += 2) {
+    let newArr = new Array(+str[i + 1]).fill(str[i])
+    arr = [...arr,...newArr]
+  }
+  return arr
+}
+
+console.log(editorStrArr('a2b3c1'));
