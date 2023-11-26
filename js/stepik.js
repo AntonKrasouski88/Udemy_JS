@@ -188,3 +188,32 @@ function editorStrArr (str) {
 }
 
 console.log(editorStrArr('a2b3c1'));
+
+
+//Task stepik: sort arrays with values ​​"zero" and "one"
+function sortArray (grid) {
+  let flag = true;
+  
+  while(flag) {
+    flag = false;
+    
+    for (let i = 0; i < grid.length - 1; i++) {
+      for (let j = 0; j < grid[i].length; j++) {
+        console.log(grid[i + 1]);
+        if(grid[i][j] === 1 && grid[i + 1][j] === 0) {
+          [grid[i][j], grid[i + 1][j]] = [grid[i + 1][j], grid[i][j]]
+          flag = true
+        }
+        
+      }
+    }
+  }
+  return grid
+}
+
+console.log(sortArray([
+  [1,1,1,0,0],
+  [0,0,0,1,0],
+  [1,1,0,0,1],
+  [0,0,0,1,0]
+]));
