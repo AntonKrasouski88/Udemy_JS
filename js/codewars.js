@@ -1689,3 +1689,11 @@ function countArray(arr) {
 }
 
 console.log(countArray([1, [2, 3], 3, [4, [5]]]));
+
+//Task: Bit Counting
+function countBits (n) {
+  let num = n.toString(2).split('').reduce((acc, el) => acc + +el, 0)
+  return num
+}
+
+console.log(countBits(1234));
