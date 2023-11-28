@@ -217,3 +217,28 @@ console.log(sortArray([
   [1,1,0,0,1],
   [0,0,0,1,0]
 ]));
+
+function countBild (grid) {
+  let oneStory = 0;
+  let twoStory = 0;
+  let threeStory = 0;
+
+  for (let i = 0; i < grid[0].length; i++) {
+    let count = 0;
+
+    grid.forEach(el => {
+      el[i] === 1 && (++count) 
+    });
+
+    count == 1 && (++oneStory) || count == 2 && (++twoStory) || count === 3 && (++threeStory);
+    
+  }
+
+  return `одноэтажных башен: ${oneStory}, двуэтажных башен: ${twoStory}, трехэтажных: ${threeStory}`
+}
+
+console.log(countBild([
+  [0,0,0,1,0,0],
+  [1,0,0,1,1,0],
+  [1,1,1,1,1,1]
+]));
