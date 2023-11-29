@@ -242,3 +242,21 @@ console.log(countBild([
   [1,0,0,1,1,0],
   [1,1,1,1,1,1]
 ]));
+
+
+//Task stepik: custom sort
+function customSort(data) {
+  let arrNum = data.filter(el => typeof el === 'number').sort((a, b) => a - b);
+  let arrStr = data.filter(el => typeof el === 'string').sort();
+  let dataSort = []
+  let len = arrNum.length >= arrStr.length ? arrNum.length : arrStr.length 
+
+  for (let i = 0; i < len; i++) {
+    arrNum[i] !== undefined && dataSort.push(arrNum[i]) || dataSort.push(0)
+    arrStr[i] !== undefined && dataSort.push(arrStr[i]) || dataSort.push(0)
+  }
+
+  return dataSort.filter(el => el !== 0)
+}
+
+console.log(customSort([20,3,"a",1,"b",4,"q","g","w","z",5]));
