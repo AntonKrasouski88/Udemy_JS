@@ -252,11 +252,26 @@ function customSort(data) {
   let len = arrNum.length >= arrStr.length ? arrNum.length : arrStr.length 
 
   for (let i = 0; i < len; i++) {
-    arrNum[i] !== undefined && dataSort.push(arrNum[i]) || dataSort.push(0)
-    arrStr[i] !== undefined && dataSort.push(arrStr[i]) || dataSort.push(0)
+    arrNum[i] !== undefined && dataSort.push(arrNum[i])
+    arrStr[i] !== undefined && dataSort.push(arrStr[i])
   }
 
-  return dataSort.filter(el => el !== 0)
+  return dataSort
 }
 
 console.log(customSort([20,3,"a",1,"b",4,"q","g","w","z",5]));
+
+//Task stepik: custom sort number
+function customSortNumber(data, order) {
+  let arr = data.map(el => {
+    if(order === 'ASC') {
+      return String(el).split('').sort().join('')
+    } else {
+      return String(el).split('').sort((a, b) => b - a).join('')
+    }
+  })
+
+  return arr.map(el => +el)
+}
+
+console.log(customSortNumber([123,24,199], 'DESC'));
