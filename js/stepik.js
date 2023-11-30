@@ -275,3 +275,19 @@ function customSortNumber(data, order) {
 }
 
 console.log(customSortNumber([123,24,199], 'DESC'));
+
+//Task stepik: compare sides
+function compareSides(data) {
+  let right = 0;
+  let left = 0;
+
+  for (let i = 0; i < data.length; i++) {
+    data.forEach(el => {
+      i < data.length / 2 && (left += el[i]) || (right += el[i])
+    });
+  }
+
+  return right > left ? 'правая' : right < left ? 'левая' : 'равны'
+}
+
+console.log(compareSides([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]));
