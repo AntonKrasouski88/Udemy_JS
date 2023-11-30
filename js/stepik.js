@@ -291,3 +291,40 @@ function compareSides(data) {
 }
 
 console.log(compareSides([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]));
+
+//Task stepik: sumCircles
+function sumCircles(data) {
+  let arr = [...data];
+  let arrSum = []
+
+  while(arr.length > 0) {
+    let sum = 0;
+    arr.forEach ((el, i) => {
+      for (let j = 0; j < el.length; j++) {
+        if(i === 0 || i === arr.length - 1) {
+          sum += el[j]
+          console.log(sum);
+        } 
+        i !== 0 && i !== el.length - 1 && (j === 0 || j === el.length - 1) && (sum += el[j]) 
+      }
+    })
+    arrSum.push(sum)
+    arr = arr.filter((el, i) => i !== 0 && i !== arr.length - 1 ? el.shift() && el.pop(): '')
+    console.log(arr);
+  }
+
+  return arrSum
+}
+
+//console.log(sumCircles([[10, 10, 10, 10, 10],[10, 10, 10, 10, 10],[10, 10, 10, 10, 10],[10, 10, 10, 10, 10],[10, 10, 10, 10, 10]]));
+//console.log(sumCircles([[10, 10, 10, 10, 10, 10, 10, 10],[10, 10, 10, 10, 10, 10, 10, 10],[10, 10, 10, 10, 10, 10, 10, 10],[10, 10, 10, 10, 10, 10, 10, 10],
+//[10, 10, 10, 10, 10, 10, 10, 10],[10, 10, 10, 10, 10, 10, 10, 10],[10, 10, 10, 10, 10, 10, 10, 10],[10, 10, 10, 10, 10, 10, 10, 10]]));
+console.log(sumCircles([[100, 10, 10, 10, 10, 10, 10, 100],
+                        [10, 10, 10, 10, 10, 10, 10, 10],
+                        [10, 10, 10, 10, 10, 10, 10, 10],
+                        [10, 10, 200, 10, 10, 200, 10, 10],
+                        [10, 10, 10, 10, 10, 10, 10, 10],
+                        [10, 10, 10, 10, 10, 10, 10, 10],
+                        [10, 10, 30, 10, 10, 10, 30, 10],
+                        [100, 10, 10, 10, 10, 10, 10, 100]
+                      ]))
