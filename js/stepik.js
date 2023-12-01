@@ -328,3 +328,26 @@ console.log(sumCircles([[100, 10, 10, 10, 10, 10, 10, 100],
                         [10, 10, 30, 10, 10, 10, 30, 10],
                         [100, 10, 10, 10, 10, 10, 10, 100]
                       ]))
+
+//Task stepik: propage light
+function propagateLight(grid) {
+  let pos;
+    
+  if(grid.length < 3) {
+    return grid 
+  }
+
+  grid.forEach((el, i)=> {
+    for (let j = 0; j < el.length; j++) {
+      if (el[j] === 1) {
+        pos = [i, j]
+        break
+      }
+    }   
+  });
+  grid[pos[0]] = grid[pos[0]].map((_, i, arr ) => arr[i] = 1);
+  for(let i = 0; i < grid.length; i++) {
+    grid[i][pos[1]] = 1
+  }
+  return grid
+}
