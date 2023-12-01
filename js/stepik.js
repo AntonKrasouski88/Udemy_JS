@@ -351,3 +351,28 @@ function propagateLight(grid) {
   }
   return grid
 }
+
+//Task stepik: propage light(2 task)
+function propagateLight2(grid) {
+  let pos;
+  if(grid.length < 3) {
+    return grid 
+  }
+
+  grid.forEach((el, i)=> {
+    for (let j = 0; j < el.length; j++) {
+      if (el[j] === 1) {
+        pos = [i, j]
+        break
+      }
+    }   
+  });
+  grid[pos[0] - 1] && (grid[pos[0] - 1][pos[1]] = 1)
+  grid[pos[0] + 1] && (grid[pos[0] + 1][pos[1]] = 1)
+  grid[pos[0]][pos[1] - 1] !== undefined && (grid[pos[0]][pos[1] - 1] = 1)
+  grid[pos[0]][pos[1] + 1] !== undefined && (grid[pos[0]][pos[1] + 1] = 1)
+
+  return grid
+}
+
+console.log(propagateLight2([[0,0,0],[0,1,0],[0,0,0]]));
