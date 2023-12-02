@@ -20,3 +20,23 @@ var expect = function (val) {
  expect(5).toBe(5); // true
  expect(5).notToBe(5); // throws "Equal"
  
+var createCounter = function(init) {
+    let a = init;
+    return {
+        "increment": function () {
+            return ++a;
+        },
+        "decrement": function () {
+            return --a;
+        },
+        reset: function () {
+            a = init
+            return a
+        }
+}
+};
+
+const counter = createCounter(5)
+console.log(counter.increment()); //6
+console.log(counter.reset()); // 5
+console.log(counter.decrement()); // 4
