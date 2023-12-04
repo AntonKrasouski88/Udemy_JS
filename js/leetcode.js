@@ -40,3 +40,12 @@ const counter = createCounter(5)
 console.log(counter.increment()); //6
 console.log(counter.reset()); // 5
 console.log(counter.decrement()); // 4
+
+//Task leetcode: 2635. Apply Transform Over Each Element in Array
+var map = function(arr, fn) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(fn(arr[i], i))
+    }
+    return newArr
+};
