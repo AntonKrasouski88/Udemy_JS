@@ -1697,3 +1697,9 @@ function countBits (n) {
 }
 
 console.log(countBits(1234));
+
+//Task: Take a Ten Minutes Walk
+function isValidWalk(walk) {
+  return walk.length === 10
+}
+
