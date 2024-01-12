@@ -1703,3 +1703,24 @@ function isValidWalk(walk) {
   return walk.length === 10
 }
 
+//Task Persistent Bugger
+function persistent(num) {
+  let count = 0;
+  let flag = true;
+  if (String(num).length === 1) {
+    return 0 
+  }
+  while(flag) {
+    count++;
+    num = String(num).split('').reduce((acc, el) => acc * el);
+    if(`${num}`.length == 1){
+      flag = false;
+    }
+  }
+  return count;
+}
+
+console.log(persistent(999));
+console.log(persistent(4));
+console.log(persistent(25));
+console.log(persistent(39));
