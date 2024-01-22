@@ -1724,3 +1724,10 @@ console.log(persistent(999));
 console.log(persistent(4));
 console.log(persistent(25));
 console.log(persistent(39));
+
+//Task: Get the mean of an array
+function getAverage(marks) {
+  return Math.floor(marks.reduce((accum, el) => accum + el) / marks.length);
+}
+
+console.log(getAverage([1,2,3,4,5,]));
