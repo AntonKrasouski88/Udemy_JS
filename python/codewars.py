@@ -432,3 +432,9 @@ def merge_lists(lt):
 n = int(input())
 arr = [input().split() for i in range(n)]
 print(merge_lists(arr))
+
+# Task: Get the mean fo an array
+def get_average(marks):
+    return sum(marks)//len(marks)
+
+print(get_average([1, 2, 3]))
