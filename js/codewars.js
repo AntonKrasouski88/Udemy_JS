@@ -1731,3 +1731,26 @@ function getAverage(marks) {
 }
 
 console.log(getAverage([1,2,3,4,5,]));
+
+//Task: Odd or Even
+
+/* function oddOrEven (array) {
+  if(array.length == 0 || array.length == 0 && arr[0] == 0) {
+    return 'Even'
+  }
+  let num = array.reduce((acc, el) => acc + el)
+
+  if (num%2 == 0) {
+    return 'Even'
+  } else {
+    return 'Odd'
+  }
+} */
+
+function oddOrEven (array) {
+  return array.reduce((acc, el) => acc + el) % 2 == 0 ? 'odd' : 'even'
+}
+
+console.log(oddOrEven([0]));
+console.log(oddOrEven([0, 1, 4]));
+console.log(oddOrEven([0, -1, -5]));
